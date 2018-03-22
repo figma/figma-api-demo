@@ -7,7 +7,7 @@ import {ErrorRange} from "spellchecker";
 const file_id = '<FILE KEY TO SPELLCHECK>';
 const personal_access_token = '<INSERT YOUR PERSONAL ACCESS TOKEN>';
 
-const api_endpoint = 'http://api.figma.com/v1';
+const api_endpoint = 'https://api.figma.com/v1';
 
 function getTextNodes(figFile: any) {
   return traverse.nodes(figFile)
