@@ -20,6 +20,6 @@ for an app you are working on in Figma.
 2. Open `index.html` in a web browser.
 3. Select a frame from a Figma document you want to project on to the mock ups and copy the url. 
     - Be sure the the url you copy includes the `node-id`. 
-4. Input the frane url on `index.html` and click render.
+4. Input the frame url on `index.html` and click render.
 
 You should see your frame projected into each image on the page.
