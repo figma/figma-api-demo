@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import { getComponentFromId } from '../figmaComponents';
 
 export class CClock extends PureComponent {
-  state = {...(this.getTime())};
+  state = {this.getTime()};
 
   ticker = null;
 
@@ -16,7 +16,7 @@ export class CClock extends PureComponent {
 
   componentWillMount() {
     this.ticker = setInterval(() => {
-      this.setState({...(this.getTime())});
+      this.setState(this.getTime());
     }, 1000);
   }
 

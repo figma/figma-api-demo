@@ -25,7 +25,7 @@ const vectorList = [];
 const vectorTypes = ['VECTOR', 'LINE', 'REGULAR_POLYGON', 'ELLIPSE', 'STAR'];
 
 function preprocessTree(node) {
-  let vectorsOnly = node.type !== 'COMPONENT' && node.type !== 'INSTANCE';
+  let vectorsOnly = node.name.charAt(0) !== '#';
   let vectorVConstraint = null;
   let vectorHConstraint = null;
 

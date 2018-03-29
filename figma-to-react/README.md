@@ -21,7 +21,7 @@ We use 2 endpoints in this project:
 
 By default this project comes with a prerendered component in `src/figmaComponents.js`. You can see a page that uses this component if you
 run `npm start`. This will start a React server and a webpage will open to the root page. This webpage will automatically refresh as
-you make changes to the source documents. To follow allow with the example component, the source Figma file is located [here](https://www.figma.com/file/VGULlnz44R0Ooe4FZKDxlhh4/Untitled).
+you make changes to the source documents. To follow along with the example component, the source Figma file is located [here](https://www.figma.com/file/VGULlnz44R0Ooe4FZKDxlhh4/Untitled).
 
 When we run the converter, we will convert any *top level frames* in the document to React Components *as long as their name starts with `#`*.
 In the example document you can see that we have one top level frame named `#Clock`. The component resulting from this will be exported in
