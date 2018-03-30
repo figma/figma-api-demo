@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import { getComponentFromId } from '../figmaComponents';
 
 export class CClock extends PureComponent {
-  state = {this.getTime()};
+  state = this.getTime();
 
   ticker = null;
 
@@ -11,6 +11,7 @@ export class CClock extends PureComponent {
     return {
       time: moment().format('hh:mm'),
       seconds: moment().format(':ss'),
+      ampm: moment().format('A'),
     };
   }
 
