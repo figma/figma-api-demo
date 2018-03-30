@@ -45,7 +45,7 @@ where `<API_TOKEN_HERE>` would be repaced with your developer token.
 
 The real vision of this converter is to separate design concerns from coding concerns. Toward this end, we introduce the concept of
 `variables` in Figma. Variables in a Figma file are denoted by text nodes (this can be expanded in the future) with names starting with
-`$`. In the example document there are two variables: `$time` and `$seconds`. By setting state in the component stubs defined in
+`$`. In the example document there are three variables: `$time`, `$seconds`, and `$ampm`. By setting state in the component stubs defined in
 `src/components`, we can *change the text of the variable nodes*. For an example, take a look at `src/components/CClock.js`. This
 allows us to change the design of a component without touching the code at all.
 
