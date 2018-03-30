@@ -41,6 +41,8 @@ node main.js VGULlnz44R0Ooe4FZKDxlhh4 <API_TOKEN_HERE>
 
 where `<API_TOKEN_HERE>` would be repaced with your developer token.
 
+*IMPORTANT*: The index.css file is required to be included for components to render completely.
+
 ## Variables
 
 The real vision of this converter is to separate design concerns from coding concerns. Toward this end, we introduce the concept of
