@@ -21,10 +21,10 @@ class CClock1D2 extends PureComponent {
         <div style={{"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
           <div
             id="1:4"
-            style={{"width":749.5057983398438,"marginLeft":24.22008514404297,"height":22.613483428955078,"marginTop":-323.3865165710447}}
+            style={{"width":770,"marginLeft":26.99999237060547,"height":22.5,"marginTop":-323.4999999999998}}
             className="innerDiv"
           >
-            <img alt="Fade" className="vector" src="https://s3-us-west-2.amazonaws.com/figma-alpha/img/91ca/0735/f4a5a619b21852648e19265a4173ca61" />
+            <img alt="Fade" className="vector" src="https://s3-us-west-2.amazonaws.com/figma-alpha/img/af89/eea7/c1a95edb1ca58c33522d9859410af26b" />
           </div>
         </div>
         <div style={{"zIndex":1,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
