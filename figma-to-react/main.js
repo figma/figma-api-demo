@@ -106,6 +106,25 @@ async function main() {
   const imageJSON = await data.json();
 
   const images = imageJSON.images || {};
+  if (images) {
+    let promises = [];
+    let guids = [];
+    for (const guid in images) {
+      guids.push(guid);
+      promises.push(fetch(images[guid]));
+    }
+
+    let responses = await Promise.all(promises);
+    promises = [];
+    for (const resp of responses) {
+      promises.push(resp.text());
+    }
+
+    responses = await Promise.all(promises);
+    for (let i=0; i<responses.length; i++) {
+      images[guids[i]] = responses[i].replace('<svg ', '<svg preserveAspectRatio="none" ');
+    }
+  }
 
   const componentMap = {};
   let contents = `import React, { PureComponent } from 'react';\n`;
@@ -119,7 +138,7 @@ async function main() {
       nextSection += `export class Master${child.name.replace(/\W+/g, "")} extends PureComponent {\n`;
       nextSection += "  render() {\n";
       nextSection += `    return <div className="master" style={{backgroundColor: "${figma.colorString(child.backgroundColor)}"}}>\n`;
-      nextSection += `      <C${child.name.replace(/\W+/g, "")} nodeId="${child.id}" />\n`;
+      nextSection += `      <C${child.name.replace(/\W+/g, "")} {...this.props} nodeId="${child.id}" />\n`;
       nextSection += "    </div>\n";
       nextSection += "  }\n";
       nextSection += "}\n\n";

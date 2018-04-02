@@ -5,6 +5,7 @@
   "dependencies": {
     "moment": "^2.20.1",
     "node-fetch": "^1.7.3",
+    "svg-to-jsx": "0.0.21",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17"

@@ -9,6 +9,7 @@ body {
 
 .master {
   position: absolute;
+  overflow: hidden;
   width: 100%;
   min-height: 100%;
 }
@@ -50,7 +51,12 @@ input:focus {
   bottom: 0;
 }
 
-img.vector {
+.vector svg {
   width: 100%;
   height: 100%;
+  position: absolute;
+}
+
+a {
+  cursor: pointer;
 }

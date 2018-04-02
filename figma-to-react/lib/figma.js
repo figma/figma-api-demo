@@ -185,6 +185,7 @@ export class ${name} extends PureComponent {
       if (bounds != null) {
         styles.marginRight = bounds.right;
         styles.width = bounds.width;
+        styles.minWidth = bounds.width;
       }
     } else if (cHorizontal === 'CENTER') {
       outerStyle.justifyContent = 'center';
@@ -202,6 +203,7 @@ export class ${name} extends PureComponent {
       if (bounds != null) {
         styles.marginLeft = bounds.left;
         styles.width = bounds.width;
+        styles.minWidth = bounds.width;
       }
     }
 
@@ -229,6 +231,10 @@ export class ${name} extends PureComponent {
       if (bounds != null) {
         styles.marginTop = bounds.top;
         styles.marginBottom = bounds.bottom;
+        if (node.children) {
+          styles.minHeight = styles.height;
+          styles.height = null;
+        }
       }
     }
 
@@ -364,11 +370,11 @@ export class ${name} extends PureComponent {
       printDiv(styles, outerStyle, indent);
     }
 
-    if (node.type === 'VECTOR') {
-      print(`    <img alt="${node.name}" className="vector" src="${imgMap[node.id]}" />`, indent);
-    } else if (node !== component && node.name.charAt(0) === '#') {
+    if (node.id !== component.id && node.name.charAt(0) === '#') {
       print(`    <C${node.name.replace(/\W+/g, '')} {...this.props} nodeId="${node.id}" />`, indent);
       createComponent(node, imgMap, componentMap);
+    } else if (node.type === 'VECTOR') {
+      print(`    <div className="vector" dangerouslySetInnerHTML={{__html: \`${imgMap[node.id]}\`}} />`, indent);
     } else {
       const newNodeBounds = node.absoluteBoundingBox;
       const newLastVertical = newNodeBounds && newNodeBounds.y + newNodeBounds.height;
