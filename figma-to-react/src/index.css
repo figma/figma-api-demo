@@ -35,6 +35,7 @@ input:focus {
 
 .innerDiv {
   position: relative;
+  box-sizing: border-box;
   pointer-events: auto;
 }
 
