@@ -110,6 +110,7 @@ async function main() {
     let promises = [];
     let guids = [];
     for (const guid in images) {
+      if (images[guid] == null) continue;
       guids.push(guid);
       promises.push(fetch(images[guid]));
     }

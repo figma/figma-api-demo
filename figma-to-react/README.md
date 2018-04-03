@@ -13,7 +13,7 @@ We use 2 endpoints in this project:
 
 ## Set up
 
-1. Install [Node](https://nodejs.org/)
+1. Install [Node](https://nodejs.org/). You'll need a recent version that supports `async / await`
 2. In this directory, run `npm install`
 3. Run the converter per instructions below
 
