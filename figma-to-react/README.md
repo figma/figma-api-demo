@@ -53,14 +53,19 @@ allows us to change the design of a component without touching the code at all.
 
 ## Why React?
 
-This particular example uses React since it was convenient. There is no reason that the same logic could be applied to any other
+This particular example uses React since it was convenient. There is no reason that the same logic couldn't be applied to any other
 frontend framework.
 
-## Example
+## ExampleS
 
 Here's an example of using Figma to React to update the style on a sortable list:
 
 ![duck-list](https://static.figma.com/uploads/9e647f547b9487af4d879627de3bae84591671c1)
+
+
+Here's an example of using Figma to React to attach code to a component dragged in from the Team Library:
+
+![clock](https://static.figma.com/uploads/3e4a5e166e295433c29c0e3e78d3a436efc64353)
 
 ## Credits
 
