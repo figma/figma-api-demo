@@ -56,6 +56,12 @@ allows us to change the design of a component without touching the code at all.
 This particular example uses React since it was convenient. There is no reason that the same logic could be applied to any other
 frontend framework.
 
+## Example
+
+Here's an example of using Figma to React to update the style on a sortable list:
+
+![duck-list](https://static.figma.com/uploads/9e647f547b9487af4d879627de3bae84591671c1)
+
 ## Credits
 
 This repo contains the service worker code from React.
