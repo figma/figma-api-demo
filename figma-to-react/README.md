@@ -56,7 +56,7 @@ allows us to change the design of a component without touching the code at all.
 This particular example uses React since it was convenient. There is no reason that the same logic couldn't be applied to any other
 frontend framework.
 
-## ExampleS
+## Examples
 
 Here's an example of using Figma to React to update the style on a sortable list:
 
