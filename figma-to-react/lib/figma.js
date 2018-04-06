@@ -231,10 +231,8 @@ export class ${name} extends PureComponent {
       if (bounds != null) {
         styles.marginTop = bounds.top;
         styles.marginBottom = bounds.bottom;
-        if (node.children) {
-          styles.minHeight = styles.height;
-          styles.height = null;
-        }
+        styles.minHeight = styles.height;
+        styles.height = null;
       }
     }
 
@@ -391,8 +389,10 @@ export class ${name} extends PureComponent {
         styles.pointerEvents = 'none';
         styles.backgroundColor = null;
         printDiv(styles, outerStyle, indent + '      ');
+        first = true;
         for (const child of maxChildren) {
-          visitNode(child, node, lastVertical, indent + '          ');
+          visitNode(child, node, first ? null : newLastVertical, indent + '          ');
+          first = false;
         }
         print(`        </div>`, indent);
         print(`      </div>`, indent);
