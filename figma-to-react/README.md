@@ -41,6 +41,19 @@ node main.js VGULlnz44R0Ooe4FZKDxlhh4 <API_TOKEN_HERE>
 
 where `<API_TOKEN_HERE>` would be repaced with your developer token.
 
+You could also change the .env file and insert your token there
+
+```
+//.env  
+DEV_TOKEN=<YOUR_TOKEN>
+```
+then you only need to pass the project id
+```
+node main.js VGULlnz44R0Ooe4FZKDxlhh4
+```
+
+
+
 *IMPORTANT*: The index.css file is required to be included for components to render completely.
 
 ## Variables
