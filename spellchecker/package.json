@@ -20,9 +20,11 @@
     "@types/request": "^2.47.0",
     "@types/traverse": "^0.6.30",
     "commander": "2.13.0",
+    "cryptiles": ">=4.1.2",
     "hoek": "5.0.3",
     "request": "^2.83.0",
     "spellchecker": "^3.4.4",
+    "sshpk": ">=1.13.2",
     "traverse": "^0.6.6",
     "typescript": "2.6.2"
   }
