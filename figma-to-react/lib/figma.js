@@ -247,7 +247,7 @@ export class ${name} extends PureComponent {
             styles.backgroundColor = colorString(lastFill.color);
             styles.opacity = lastFill.opacity;
           } else if (lastFill.type === 'IMAGE') {
-            styles.backgroundImage = imageURL(lastFill.imageHash);
+            styles.backgroundImage = imageURL(lastFill.imageRef);
             styles.backgroundSize = backgroundSize(lastFill.scaleMode);
           } else if (lastFill.type === 'GRADIENT_LINEAR') {
             styles.background = paintToLinearGradient(lastFill);
