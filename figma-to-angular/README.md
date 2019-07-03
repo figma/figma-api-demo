@@ -1,27 +1,81 @@
-# FigmaToAngular
+# Figma to Angular Converter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+This demonstrates using the Figma REST API to convert a Figma document to Angular Components and Figma components module.
+Disclaimer: this code is likely incomplete, and may have bugs. It is not intended to be used
+in production. This is simply a proof of concept to show what possibilities exist.
 
-## Development server
+## API Usage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+We use 2 endpoints in this project:
 
-## Code scaffolding
+- `GET /v1/files/:file_key` - Get the JSON tree from a file. This is the main workhorse of this project and lays the skeleton of the React Components.
+- `GET /v1/images/:file_key` - When we identify nodes that are vectors or other nodes that can't directly be represented by `div`s, we have to render them as svgs.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Set up
 
-## Build
+1. Install [Node](https://nodejs.org/). You'll need a recent version that supports `async / await`
+2. In this directory, run `npm install`
+3. Run the converter per instructions below
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
 
-## Running unit tests
+By default this project comes with a prerendered component in `src/figmaComponents`. You can see a page that uses this component if you
+run `npm start`. This will start a React server and a webpage will open to the root page. This webpage will automatically refresh as
+you make changes to the source documents. To follow along with the example component, the source Figma file is located [here](https://www.figma.com/file/VGULlnz44R0Ooe4FZKDxlhh4/Untitled).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+When we run the converter, we will convert any *top level frames* in the document to Angular Components *as long as their name starts with `#`*.
+In the example document you can see that we have one top level frame named `#Clock`. The component resulting from this will be exported in
+`src/components/CFClock.component` as `CFClock`, a `dump component`.
 
-## Running end-to-end tests
+In addition, *any* node with a name starting with a `#` will have a code stub generated for it in `src/components`. These code stubs can be
+modified to affect the rendering of those components as well as modifying variables within the component (see variables section below).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+To run the converter on a file, you will need a personal access token from Figma. Refer to the [Figma API documentation](https://www.figma.com/developers/docs)
+for more information on how to obtain a token. The other piece of information you will need is the file key of the file you wish to convert,
+which is located in the file's URL (for example, this is `VGULlnz44R0Ooe4FZKDxlhh4` for the example file). So, an example conversion would look
+like:
 
-## Further help
+```
+node main.js VGULlnz44R0Ooe4FZKDxlhh4 <API_TOKEN_HERE>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+where `<API_TOKEN_HERE>` would be repaced with your developer token.
+
+You can also change the .env file and insert your token there
+
+```
+//.env  
+DEV_TOKEN=<YOUR_TOKEN>
+```
+then you only need to pass the project id
+```
+node main.js VGULlnz44R0Ooe4FZKDxlhh4
+```
+
+
+
+*IMPORTANT*: The index.css file is required to be included for components to render completely.
+
+## Variables
+
+The real vision of this converter is to separate design concerns from coding concerns. Toward this end, we introduce the concept of
+`variables` in Figma. Variables in a Figma file are denoted by text nodes (this can be expanded in the future) with names starting with
+`$`. In the example document there are three variables: `$time`, `$seconds`, and `$ampm`. By setting state in the component stubs defined in
+`src/components`, we can *change the text of the variable nodes*. For an example, take a look at `src/app/app.component`. This
+allows us to change the design of a component without touching the code at all.
+
+## Why Angular?
+
+Because it's one of the best frameworks
+
+## Examples
+
+Here's an example of using Figma to React to update the style on a sortable list:
+
+![duck-list](https://static.figma.com/uploads/9e647f547b9487af4d879627de3bae84591671c1)
+
+
+Here's an example of using Figma to React to attach code to a component dragged in from the Team Library:
+
+![clock](https://static.figma.com/uploads/3e4a5e166e295433c29c0e3e78d3a436efc64353)
+
