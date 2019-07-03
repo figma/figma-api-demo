@@ -129,30 +129,36 @@ async function main() {
   }
 
   const componentMap = {};
-  let contents = `import React, { PureComponent } from 'react';\n`;
-  let nextSection = '';
+  let contents = `import { NgModule } from '@angular/core';\n`;
+  contents += `import { FormsModule } from '@angular/forms';\n`;
+  contents += `import { CommonModule } from '@angular/common';\n`;
+  let nextSection = ``;
 
   for (let i=0; i<canvas.children.length; i++) {
     const child = canvas.children[i]
     if (child.name.charAt(0) === '#' && child.visible !== false) {
       const child = canvas.children[i];
       figma.createComponent(child, images, componentMap);
-      nextSection += `export class Master${child.name.replace(/\W+/g, "")} extends PureComponent {\n`;
-      nextSection += "  render() {\n";
-      nextSection += `    return <div className="master" style={{backgroundColor: "${figma.colorString(child.backgroundColor)}"}}>\n`;
-      nextSection += `      <C${child.name.replace(/\W+/g, "")} {...this.props} nodeId="${child.id}" />\n`;
-      nextSection += "    </div>\n";
-      nextSection += "  }\n";
-      nextSection += "}\n\n";
+      // nextSection += `@Component({`;
+      // nextSection += `selector: 'my-app',
+      //         template: \``;
+      //         nextSection += `    <div class="master" [ngStyle]="{backgroundColor: '${figma.colorString(child.backgroundColor)}'}">\n`;
+      //         nextSection += `      <C${child.name.replace(/\W+/g, "")} {...this.props} nodeId="${child.id}" />\n`;
+      //         nextSection += "    </div>\n`";
+      //         nextSection += "})"
+      // nextSection += `export class Master${child.name.replace(/\W+/g, "")}  {\n`;
+      // nextSection += "}\n\n";
     }
   }
 
   const imported = {};
+  const components = [];
   for (const key in componentMap) {
     const component = componentMap[key];
     const name = component.name;
     if (!imported[name]) {
-      contents += `import { ${name} } from './components/${name}';\n`;
+      contents += `import { ${name}Component } from './${name}.component';\n`;
+      components.push(name+'Component');
     }
     imported[name] = true;
   }
@@ -160,17 +166,23 @@ async function main() {
   contents += nextSection;
   nextSection = '';
 
-  contents += `export function getComponentFromId(id) {\n`;
+  nextSection += '@NgModule({\n';
+  nextSection += '  imports: [ CommonModule, FormsModule ],\n',
+  nextSection += `  declarations: [ ${components.join(', ')} ],\n`
+  nextSection += `  exports: [ ${components.join(', ')} ],\n`
+  nextSection +=`})\n`;
+  nextSection +=`export class FigmaModule { }`;
+  // contents += `export function getComponentFromId(id) {\n`;
 
-  for (const key in componentMap) {
-    contents += `  if (id === "${key}") return ${componentMap[key].instance};\n`;
-    nextSection += componentMap[key].doc + "\n";
-  }
+  // for (const key in componentMap) {
+  //   contents += `  if (id === "${key}") return ${componentMap[key].instance};\n`;
+  //   nextSection += componentMap[key].doc + "\n";
+  // }
 
-  contents += "  return null;\n}\n\n";
+  // contents += "  return null;\n}\n\n";
   contents += nextSection;
 
-  const path = "./src/figmaComponents.js";
+  const path = "./src/components/figma.module.ts";
   fs.writeFile(path, contents, function(err) {
     if (err) console.log(err);
     console.log(`wrote ${path}`);

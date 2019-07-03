@@ -105,23 +105,24 @@ const createComponent = (component, imgMap, componentMap) => {
   const instance = name + component.id.replace(';', 'S').replace(':', 'D');
 
   let doc = '';
-  print(`class ${instance} extends PureComponent {`, '');
-  print(`  render() {`, '');
-  print(`    return (`, '');
 
-  const path = `src/components/${name}.js`;
+  // print(`@Component({`, ``);
+  // print(`selector: 'app-${instance}',`,``);
+  // print(`selector: 'app-${name}',`,``);
+  // print(`template: \``,``);
+
+  const path = `src/components/${name}.component.ts`;
 
   if (!fs.existsSync(path)) {
-    const componentSrc = `import React, { PureComponent } from 'react';
-import { getComponentFromId } from '../figmaComponents';
+    const componentSrc = `
+import { Component, Input } from '@angular/core';
 
-export class ${name} extends PureComponent {
-  state = {};
-
-  render() {
-    const Component = getComponentFromId(this.props.nodeId);
-    return <Component {...this.props} {...this.state} />;
-  }
+@Component({
+  selector: 'app-${name}',
+  templateUrl: '${name}.component.html',
+})
+export class ${name}Component  {
+  @Input() props: any;
 }
 `;
     fs.writeFile(path, componentSrc, function(err) {
@@ -176,22 +177,23 @@ export class ${name} extends PureComponent {
 
     if (cHorizontal === 'LEFT_RIGHT') {
       if (bounds != null) {
-        styles.marginLeft = bounds.left;
-        styles.marginRight = bounds.right;
+        styles.marginLeft = bounds.left+'px';
+        styles.marginRight = bounds.right+'px';
         styles.flexGrow = 1;
       }
     } else if (cHorizontal === 'RIGHT') {
       outerStyle.justifyContent = 'flex-end';
       if (bounds != null) {
-        styles.marginRight = bounds.right;
-        styles.width = bounds.width;
-        styles.minWidth = bounds.width;
+        styles.marginRight = bounds.right+'px';
+        styles.width = bounds.width+'px';
+        styles.minWidth = bounds.width+'px';
       }
     } else if (cHorizontal === 'CENTER') {
       outerStyle.justifyContent = 'center';
       if (bounds != null) {
-        styles.width = bounds.width;
+        styles.width = bounds.width+'px';
         styles.marginLeft = bounds.left && bounds.right ? bounds.left - bounds.right : null;
+        styles.marginLeft +='px';
       }
     } else if (cHorizontal === 'SCALE') {
       if (bounds != null) {
@@ -201,24 +203,25 @@ export class ${name} extends PureComponent {
       }
     } else {
       if (bounds != null) {
-        styles.marginLeft = bounds.left;
-        styles.width = bounds.width;
-        styles.minWidth = bounds.width;
+        styles.marginLeft = bounds.left+'px';
+        styles.width = bounds.width+'px';
+        styles.minWidth = bounds.width+'px';
       }
     }
 
-    if (bounds && bounds.height && cVertical !== 'TOP_BOTTOM') styles.height = bounds.height;
+    if (bounds && bounds.height && cVertical !== 'TOP_BOTTOM') styles.height = bounds.height+'px';
     if (cVertical === 'TOP_BOTTOM') {
       outerClass += ' centerer';
       if (bounds != null) {
-        styles.marginTop = bounds.top;
-        styles.marginBottom = bounds.bottom;
+        styles.marginTop = bounds.top+'px';
+        styles.marginBottom = bounds.bottom+'px';
       }
     } else if (cVertical === 'CENTER') {
       outerClass += ' centerer';
       outerStyle.alignItems = 'center';
       if (bounds != null) {
         styles.marginTop = bounds.top - bounds.bottom;
+        styles.marginTop +='px';;
       }
     } else if (cVertical === 'SCALE') {
       outerClass += ' centerer';
@@ -229,8 +232,8 @@ export class ${name} extends PureComponent {
       }
     } else {
       if (bounds != null) {
-        styles.marginTop = bounds.top;
-        styles.marginBottom = bounds.bottom;
+        styles.marginTop = bounds.top+'px';
+        styles.marginBottom = bounds.bottom+'px';
         styles.minHeight = styles.height;
         styles.height = null;
       }
@@ -298,7 +301,7 @@ export class ${name} extends PureComponent {
 
       const applyFontStyle = (_styles, fontStyle) => {
         if (fontStyle) {
-          _styles.fontSize = fontStyle.fontSize;
+          _styles.fontSize = fontStyle.fontSize+'px';
           _styles.fontWeight = fontStyle.fontWeight;
           _styles.fontFamily = fontStyle.fontFamily;
           _styles.textAlign = fontStyle.textAlignHorizontal;
@@ -325,8 +328,17 @@ export class ${name} extends PureComponent {
             }
 
             const styleOverride = styleCache[currStyle] ? JSON.stringify(styleCache[currStyle]) : '{}';
-
-            ps.push(`<span style={${styleOverride}} key="${key}">${para}</span>`);
+            let varname;
+            if (node.name.charAt(0) === '$') {
+              varName = node.name.substring(1);
+            }
+            if(varName){
+              para = `
+            <ng-container *ngIf="props?.${varName}">{{props.${varName}}}</ng-container>
+            <ng-container *ngIf="!props?.${varName}">${para}</ng-container>
+            `;
+            }
+            ps.push(`<span [ngStyle]="${styleOverride.replace(/"/g,"'")}" key="${key}">${para}</span>`);
             para = '';
           }
         }
@@ -356,23 +368,40 @@ export class ${name} extends PureComponent {
       }
     }
 
-    function printDiv(styles, outerStyle, indent) {
-      print(`<div style={${JSON.stringify(outerStyle)}} className="${outerClass}">`, indent);
-      print(`  <div`, indent);
+    function printDiv(styles, outerStyle, indent, nodeName = 'div') {
+      print(`<div [ngStyle]="${JSON.stringify(outerStyle).replace(/"/g,"'")}" class="${outerClass.replace(/"/g,"'")}">`, indent);
+      if(nodeName !== 'div'){
+        print(`  <${nodeName} [props]="props"`, indent);
+      } else {
+        print(`  <div`, indent);
+      }
       print(`    id="${node.id}"`, indent);
-      print(`    style={${JSON.stringify(styles)}}`, indent);
-      print(`    className="${innerClass}"`, indent);
+      print(`    [ngStyle]="${JSON.stringify(styles).replace(/"/g,"'")}"`, indent);
+      print(`    class="${innerClass}"`, indent);
       print(`  >`, indent);
+      if(nodeName !== 'div'){
+        print(`</${nodeName}>`,'')
+        print(`</div>`,'')
+      }
     }
     if (parent != null) {
       printDiv(styles, outerStyle, indent);
     }
+    // if (node.id == component.id && node.name.charAt(0) !== '#' && parent!=null) {
+    //   printDiv(styles, outerStyle, indent);
+    // }
 
     if (node.id !== component.id && node.name.charAt(0) === '#') {
-      print(`    <C${node.name.replace(/\W+/g, '')} {...this.props} nodeId="${node.id}" />`, indent);
+      // print(`    <C${node.name.replace(/\W+/g, '')} {...this.props} nodeId="${node.id}" />`, indent);
+      const nodeName = node.name.replace(/\W+/g, '');
+      // TODO: parse props
+      printDiv(styles, outerStyle, indent, `app-C${nodeName}`);
+      // print(`    <app-C${nodeName} nodeId="${node.id}"></app-C${nodeName}>`, indent);
+      // print(`    <app-C${nodeName} [props]="props" nodeId="${node.id}"></app-C${nodeName}>`, indent);
       createComponent(node, imgMap, componentMap);
     } else if (node.type === 'VECTOR') {
-      print(`    <div className="vector" dangerouslySetInnerHTML={{__html: \`${imgMap[node.id]}\`}} />`, indent);
+      // print html
+      print(`<div class="vector">${imgMap[node.id]}</div>`, indent);
     } else {
       const newNodeBounds = node.absoluteBoundingBox;
       const newLastVertical = newNodeBounds && newNodeBounds.y + newNodeBounds.height;
@@ -400,12 +429,22 @@ export class ${name} extends PureComponent {
       if (content != null) {
         if (node.name.charAt(0) === '$') {
           const varName = node.name.substring(1);
-          print(`      {this.props.${varName} && this.props.${varName}.split("\\n").map((line, idx) => <div key={idx}>{line}</div>)}`, indent);
-          print(`      {!this.props.${varName} && (<div>`, indent);
+          // print(`      {this.props.${varName} && this.props.${varName}.split("\\n").map((line, idx) => <div key={idx}>{line}</div>)}`, indent);
+          // print(`      {!this.props.${varName} && (<div>`, indent);
           for (const piece of content) {
             print(piece, indent + '        ');
           }
-          print(`      </div>)}`, indent);
+          // printDiv(styles, outerStyle, indent + '      ');
+
+          // print(`{{${varName}}}`, indent);
+
+          // print(`  </div>`, indent);
+          // print(`</div>`, indent);
+          // print(`      {!this.props.${varName} && (<div>`, indent);
+          // for (const piece of content) {
+          //   print(piece, indent + '        ');
+          // }
+          // print(`      </div>)}`, indent);
         } else {
           for (const piece of content) {
             print(piece, indent + '      ');
@@ -415,16 +454,29 @@ export class ${name} extends PureComponent {
       print(`    </div>`, indent);
     }
 
-    if (parent != null) {
+    if (parent!=null) {
       print(`  </div>`, indent);
       print(`</div>`, indent);
+    }
+    if (parent != null) {
+      // print(`  </div>`, indent);
+      // print(`</div>`, indent);
     }
   }
 
   visitNode(component, null, null, '  ');
-  print('    );', '');
-  print('  }', '');
-  print('}', '');
+  // print('    );', '');
+  // print('  }', '');
+  // print('}', '');
+  // print(`  \`]`, '');
+  // print(`})`,'');
+  // print(`export class ${name}Component  {`,``)
+  // print(`}`,``);
+  const htmPath =`src/components/${name}.component.html`;
+  fs.writeFile(htmPath, doc, function(err) {
+    if (err) console.log(err);
+    console.log(`wrote ${htmPath}`);
+  });
   componentMap[component.id] = {instance, name, doc};
 }
 
