@@ -1,3 +1,4 @@
+![Figma Api Demo Logo](./logo.png)
 # figma-api-demo
 
 This project contains demo apps using the Figma API. They are
