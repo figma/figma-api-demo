@@ -4,7 +4,6 @@ const fs = require('fs');
 const figma = require('./lib/figma');
 
 const headers = new fetch.Headers();
-const componentList = [];
 let devToken = process.env.DEV_TOKEN;
 
 if (process.argv.length < 3) {
