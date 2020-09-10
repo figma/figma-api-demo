@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "moment": "^2.20.1",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^2.6.1",
     "svg-to-jsx": "0.0.21",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
