@@ -159,14 +159,13 @@ async function main() {
 	let jpgNodeIds = jpgList.toString();
 	console.log(jpgNodeIds)
 	const jpgData = await fetch(`${baseUrl}/v1/images/${fileKey}?ids=${jpgNodeIds}&format=jpg`, { headers });
-	const jpgJSON = await data.json();
+	const jpgJSON = await jpgData.json();
 
 	// {nodeId : image S3 path}
 	const jpgIdsPairS3Url = jpgJSON.images || {};
-	const jpgKeys = Object.keys(jpgIdsPairS3Url);
 	
-	for(let i = 0 ; i < jpgKeys.length ; i++){
-		images[jpgKeys[i]] = `<img src="${jpgIdsPairS3Url[jpgKeys[i]]} />"`
+	for(let i = 0 ; i < jpgList.length ; i++){
+		images[jpgList[i]] = `<img src="${jpgIdsPairS3Url[jpgList[i]]}">`
 	}
 	
 	const componentMap = {};
