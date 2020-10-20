@@ -2,6 +2,29 @@ const fs = require('fs');
 
 const VECTOR_TYPES = ['VECTOR', 'LINE', 'REGULAR_POLYGON', 'ELLIPSE'];
 const GROUP_TYPES = ['GROUP', 'BOOLEAN_OPERATION'];
+const RGBA_PROPERTIES = [''];
+
+function styleObjToCssFormat(styleObj) {
+	if (styleObj && Object.keys(styleObj).length > 0) {
+		const styleToCss = JSON.stringify(styleObj).replace(/"|{|}/g, '').replace(/,/g, ';');
+		let newStyle = '';
+
+		Object.keys(styleObj).map((key) => {
+			const newKey = key
+				.replace(/([a-z])([A-Z])/g, '$1-$2')
+				.replace(/\s+/g, '-')
+				.toLowerCase();
+			newStyle += `${newKey}: ${styleObj[key]}; `;
+		});
+		// const camelToKebab = styleToCss
+		//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+		//     .replace(/\s+/g, '-')
+		//     .toLowerCase();
+
+		return newStyle;
+	}
+	return '';
+}
 
 function colorString(color) {
 	return `rgba(${Math.round(color.r * 255)}, ${Math.round(color.g * 255)}, ${Math.round(
@@ -125,30 +148,30 @@ const createComponent = (component, imgMap, componentMap) => {
 	const instance = name + component.id.replace(';', 'S').replace(':', 'D');
 
 	let doc = '';
-	print(`class ${instance} extends PureComponent {`, '');
-	print(`  render() {`, '');
-	print(`    return (`, '');
+	// print(`class ${instance} extends PureComponent {`, '');
+	// print(`  render() {`, '');
+	// print(`    return (`, '');
 
 	const path = `src/components/${name}.js`;
 
-	if (!fs.existsSync(path)) {
-		const componentSrc = `import React, { PureComponent } from 'react';
-import { getComponentFromId } from '../figmaComponents';
+	// 	if (!fs.existsSync(path)) {
+	// 		const componentSrc = `import React, { PureComponent } from 'react';
+	// import { getComponentFromId } from '../figmaComponents';
 
-export class ${name} extends PureComponent {
-  state = {};
+	// export class ${name} extends PureComponent {
+	//   state = {};
 
-  render() {
-    const Component = getComponentFromId(this.props.nodeId);
-    return <Component {...this.props} {...this.state} />;
-  }
-}
-`;
-		fs.writeFile(path, componentSrc, function (err) {
-			if (err) console.log(err);
-			console.log(`wrote ${path}`);
-		});
-	}
+	//   render() {
+	//     const Component = getComponentFromId(this.props.nodeId);
+	//     return <Component {...this.props} {...this.state} />;
+	//   }
+	// }
+	// `;
+	// 		fs.writeFile(path, componentSrc, function (err) {
+	// 			if (err) console.log(err);
+	// 			console.log(`wrote ${path}`);
+	// 		});
+	// 	}
 
 	function print(msg, indent) {
 		doc += `${indent}${msg}\n`;
@@ -196,22 +219,23 @@ export class ${name} extends PureComponent {
 
 		if (cHorizontal === 'LEFT_RIGHT') {
 			if (bounds != null) {
-				styles.marginLeft = bounds.left;
-				styles.marginRight = bounds.right;
+				styles.marginLeft = `${bounds.left || 0}px`;
+				styles.marginRight = `${bounds.right || 0}px`;
 				styles.flexGrow = 1;
 			}
 		} else if (cHorizontal === 'RIGHT') {
 			outerStyle.justifyContent = 'flex-end';
 			if (bounds != null) {
-				styles.marginRight = bounds.right;
-				styles.width = bounds.width;
-				styles.minWidth = bounds.width;
+				styles.marginRight = `${bounds.right || 0}px`;
+				styles.width = `${bounds.width || 0}px`;
+				styles.minWidth = `${bounds.width || 0}px`;
 			}
 		} else if (cHorizontal === 'CENTER') {
 			outerStyle.justifyContent = 'center';
 			if (bounds != null) {
-				styles.width = bounds.width;
-				styles.marginLeft = bounds.left && bounds.right ? bounds.left - bounds.right : null;
+				styles.width = `${bounds.width || 0}px`;
+				styles.marginLeft =
+					bounds.left && bounds.right ? `${bounds.left - bounds.right}px` : 0;
 			}
 		} else if (cHorizontal === 'SCALE') {
 			if (bounds != null) {
@@ -221,24 +245,25 @@ export class ${name} extends PureComponent {
 			}
 		} else {
 			if (bounds != null) {
-				styles.marginLeft = bounds.left;
-				styles.width = bounds.width;
-				styles.minWidth = bounds.width;
+				styles.marginLeft = `${bounds.left}px`;
+				styles.width = `${bounds.width}px`;
+				styles.minWidth = `${bounds.width}px`;
 			}
 		}
 
-		if (bounds && bounds.height && cVertical !== 'TOP_BOTTOM') styles.height = bounds.height;
+		if (bounds && bounds.height && cVertical !== 'TOP_BOTTOM')
+			styles.height = `${bounds.height}px`;
 		if (cVertical === 'TOP_BOTTOM') {
 			outerClass += ' centerer';
 			if (bounds != null) {
-				styles.marginTop = bounds.top;
-				styles.marginBottom = bounds.bottom;
+				styles.marginTop = `${bounds.top}px`;
+				styles.marginBottom = `${bounds.bottom}px`;
 			}
 		} else if (cVertical === 'CENTER') {
 			outerClass += ' centerer';
 			outerStyle.alignItems = 'center';
 			if (bounds != null) {
-				styles.marginTop = bounds.top - bounds.bottom;
+				styles.marginTop = `${bounds.top - bounds.bottom}px`;
 			}
 		} else if (cVertical === 'SCALE') {
 			outerClass += ' centerer';
@@ -249,9 +274,9 @@ export class ${name} extends PureComponent {
 			}
 		} else {
 			if (bounds != null) {
-				styles.marginTop = bounds.top;
-				styles.marginBottom = bounds.bottom;
-				styles.minHeight = styles.height;
+				styles.marginTop = `${bounds.top}px`;
+				styles.marginBottom = `${bounds.bottom}px`;
+				styles.minHeight = `${styles.height}`;
 				styles.height = null;
 			}
 		}
@@ -322,7 +347,7 @@ export class ${name} extends PureComponent {
 
 			const applyFontStyle = (_styles, fontStyle) => {
 				if (fontStyle) {
-					_styles.fontSize = fontStyle.fontSize;
+					_styles.fontSize = `${fontStyle.fontSize}px`;
 					_styles.fontWeight = fontStyle.fontWeight;
 					_styles.fontFamily = fontStyle.fontFamily;
 					_styles.textAlign = fontStyle.textAlignHorizontal;
@@ -356,10 +381,11 @@ export class ${name} extends PureComponent {
 						}
 
 						const styleOverride = styleCache[currStyle]
-							? JSON.stringify(styleCache[currStyle])
-							: '{}';
+							? styleObjToCssFormat(styleCache[currStyle])
+							: '';
 
-						ps.push(`<span style={${styleOverride}} key="${key}">${para}</span>`);
+						// ps.push(`<span style={${styleOverride}} key="${key}">${para}</span>`);
+						ps.push(`<span style="${styleOverride}" key="${key}">${para}</span>`);
 						para = '';
 					}
 				};
@@ -392,11 +418,11 @@ export class ${name} extends PureComponent {
 		}
 
 		function printDiv(styles, outerStyle, indent) {
-			print(`<div style={${JSON.stringify(outerStyle)}} className="${outerClass}">`, indent);
+			print(`<div style="${styleObjToCssFormat(outerStyle)}" class="${outerClass}">`, indent);
 			print(`  <div`, indent);
 			print(`    id="${node.id}"`, indent);
-			print(`    style={${JSON.stringify(styles)}}`, indent);
-			print(`    className="${innerClass}"`, indent);
+			print(`    style="${styleObjToCssFormat(styles)}"`, indent);
+			print(`    class="${innerClass}"`, indent);
 			print(`  >`, indent);
 		}
 		if (parent != null) {
@@ -404,12 +430,13 @@ export class ${name} extends PureComponent {
 		}
 
 		if (node.type === 'VECTOR' || node.type === 'IMAGE') {
-			print(
-				`    <div className="vector" dangerouslySetInnerHTML={{__html: \`${
-					imgMap[node.id]
-				}\`}} />`,
-				indent
-			);
+			// print(
+			// 	`    <div class="vector" dangerouslySetInnerHTML={{__html: \`${
+			// 		imgMap[node.id]
+			// 	}\`}} />`,
+			// 	indent
+			// );
+			print(`    <div class="vector">${imgMap[node.id]}</div>`, indent);
 
 			// print(`<img src="${imgMap[node.id]}" />`, indent);
 		} else {
@@ -464,9 +491,9 @@ export class ${name} extends PureComponent {
 	};
 
 	visitNode(component, null, null, '  ');
-	print('    );', '');
-	print('  }', '');
-	print('}', '');
+	// print('    );', '');
+	// print('  }', '');
+	// print('}', '');
 	componentMap[component.id] = { instance, name, doc };
 };
 

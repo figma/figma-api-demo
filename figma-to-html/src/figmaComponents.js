@@ -1,337 +1,611 @@
 import React, { PureComponent } from 'react';
-import { CDiscover } from './components/CDiscover';
-import { CLoggedout } from './components/CLoggedout';
-import { CSearch } from './components/CSearch';
-import { CProfile } from './components/CProfile';
+import { CArrow } from './components/CArrow';
 
-export class MasterDiscover extends PureComponent {
+export class MasterArrow extends PureComponent {
   render() {
     return <div className="master" style={{backgroundColor: "rgba(255, 255, 255, 1)"}}>
-      <CDiscover {...this.props} nodeId="0:1003" />
-    </div>
-  }
-}
-
-export class MasterLoggedout extends PureComponent {
-  render() {
-    return <div className="master" style={{backgroundColor: "rgba(255, 255, 255, 1)"}}>
-      <CLoggedout {...this.props} nodeId="0:920" />
-    </div>
-  }
-}
-
-export class MasterSearch extends PureComponent {
-  render() {
-    return <div className="master" style={{backgroundColor: "rgba(255, 255, 255, 1)"}}>
-      <CSearch {...this.props} nodeId="0:952" />
-    </div>
-  }
-}
-
-export class MasterProfile extends PureComponent {
-  render() {
-    return <div className="master" style={{backgroundColor: "rgba(255, 255, 255, 1)"}}>
-      <CProfile {...this.props} nodeId="0:495" />
+      <CArrow {...this.props} nodeId="1393:765" />
     </div>
   }
 }
 
 export function getComponentFromId(id) {
-  if (id === "0:1003") return CDiscover0D1003;
-  if (id === "0:920") return CLoggedout0D920;
-  if (id === "0:952") return CSearch0D952;
-  if (id === "0:495") return CProfile0D495;
+  if (id === "1393:765") return CArrow1393D765;
   return null;
 }
 
-class CDiscover0D1003 extends PureComponent {
+class CArrow1393D765 extends PureComponent {
   render() {
     return (
       <div>
         <div style={{}} className="outerDiv">
           <div
-            id="0:1004"
-            style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":0,"marginBottom":-1455,"minHeight":2267,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-            className="innerDiv"
-          >
-            <div>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":8}} className="outerDiv">
-          <div
-            id="0:1304"
-            style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":-812,"marginBottom":768,"minHeight":44,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-            className="innerDiv"
-          >
-            <div>
-              <div style={{"zIndex":1}} className="outerDiv">
-                <div
-                  id="0:1321"
-                  style={{"marginLeft":21,"width":56,"minWidth":56,"height":null,"marginTop":8,"marginBottom":13,"minHeight":23,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"alignItems":"center"}} className="outerDiv centerer">
-                      <div
-                        id="0:1322"
-                        style={{"marginLeft":0.333984375,"marginRight":1.666015625,"flexGrow":1,"height":18,"marginTop":7,"color":"rgba(0, 0, 0, 1)","fontSize":15,"fontWeight":600,"fontFamily":"SF Pro Text","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.3333333432674408px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">9:27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                <div
-                  id="0:1305"
-                  style={{"marginRight":14,"width":68,"minWidth":68,"height":null,"marginTop":-29,"marginBottom":13,"minHeight":16,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1306"
-                        style={{"marginRight":0,"width":25,"minWidth":25,"height":null,"marginTop":2,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1307"
-                              style={{"width":"88%","marginLeft":"0%","height":"94.44444179534912%","top":"2.777862548828125%","border":"1px solid rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1308"
-                              style={{"width":"5.333333492279053%","marginLeft":"92%","height":"33.333333333333336%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="2" height="4" viewBox="0 0 2 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.4" d="M0 0V4C0.80794 3.66122 1.33333 2.87313 1.33333 2C1.33333 1.12687 0.80794 0.338777 0 0Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1309"
-                              style={{"width":"72%","marginLeft":"8%","height":"61.111112435658775%","top":"19.444529215494793%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":2,"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1315"
-                        style={{"marginRight":50,"width":18,"minWidth":18,"height":null,"marginTop":-14,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1317"
-                              style={{"width":"16.666666666666668%","marginLeft":"3.7000868055555554%","height":"33.333333333333336%","top":"61.110941569010414%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="4" viewBox="0 0 3 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V3C3 3.55228 2.55228 4 2 4H1C0.447715 4 0 3.55228 0 3V1C0 0.447715 0.447715 0 1 0H2Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1318"
-                              style={{"width":"16.666666666666668%","marginLeft":"29.622395833333332%","height":"50%","top":"44.44427490234375%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="6" viewBox="0 0 3 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V5C3 5.55228 2.55228 6 2 6H1C0.447715 6 0 5.55228 0 5V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1319"
-                              style={{"width":"16.666666666666668%","marginLeft":"55.55555555555556%","height":"69.44444179534912%","top":"25%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="9" viewBox="0 0 3 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V7.33333C3 7.88562 2.55228 8.33333 2 8.33333H1C0.447715 8.33333 0 7.88562 0 7.33333V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":3}} className="outerDiv centerer">
-                            <div
-                              id="0:1320"
-                              style={{"width":"16.666666666666668%","marginLeft":"81.47786458333333%","height":"88.88889153798421%","top":"5.555470784505208%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="11" viewBox="0 0 3 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V9.66667C3 10.219 2.55228 10.6667 2 10.6667H1C0.447715 10.6667 0 10.219 0 9.66667V1C0 0.447715 0.447715 0 1 0L2 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":1}} className="outerDiv centerer">
-                      <div
-                        id="0:1310"
-                        style={{"width":"30.88235294117647%","marginLeft":"29.41176470588235%","height":"93.75%","top":"6.25%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1312"
-                              style={{"width":"73.01587150210426%","marginLeft":"12.6953125%","height":"31.11111005147298%","top":"8.888956705729166%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="5" viewBox="0 0 16 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00044 2.33798C10.3219 2.33808 12.5546 3.21219 14.2371 4.77966C14.3638 4.90067 14.5663 4.89914 14.691 4.77623L15.9021 3.57849C15.9653 3.51616 16.0005 3.43171 16 3.34385C15.9995 3.25599 15.9632 3.17196 15.8993 3.11035C11.4834 -1.03678 4.51678 -1.03678 0.100859 3.11035C0.0368916 3.17192 0.000597157 3.25592 7.30289e-06 3.34378C-0.000582551 3.43164 0.0345808 3.51611 0.0977163 3.57849L1.30914 4.77623C1.43384 4.89933 1.6365 4.90086 1.76312 4.77966C3.44579 3.21209 5.67874 2.33797 8.00044 2.33798Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1313"
-                              style={{"width":"47.61904761904762%","marginLeft":"25.390625%","height":"24.444444974263508%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.99881 2.29945C6.22254 2.29938 7.4026 2.75598 8.3097 3.58054C8.43238 3.69756 8.62565 3.69502 8.74525 3.57482L9.90583 2.39766C9.96695 2.33591 10.0009 2.25215 9.99998 2.16511C9.9991 2.07807 9.9635 1.99502 9.90114 1.93453C7.13886 -0.644844 2.86111 -0.644844 0.0988288 1.93453C0.0364329 1.99502 0.000833291 2.07811 1.44426e-05 2.16518C-0.000804405 2.25225 0.0332261 2.336 0.0944733 2.39766L1.25472 3.57482C1.37432 3.69502 1.56759 3.69756 1.69028 3.58054C2.59677 2.75652 3.77589 2.29996 4.99881 2.29945Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1314"
-                              style={{"width":"22.222221465337846%","marginLeft":"38.095238095238095%","height":"22.222221692403156%","top":"60%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.89834 1.34009C4.96508 1.27595 5.00184 1.18767 4.99993 1.09612C4.99802 1.00456 4.95761 0.91783 4.88825 0.856407C3.50964 -0.285469 1.49054 -0.285469 0.111933 0.856407C0.0425245 0.917781 0.00205366 1.00448 7.6004e-05 1.09604C-0.00190165 1.1876 0.0347892 1.2759 0.101485 1.34009L2.26052 3.47345C2.3238 3.53614 2.41007 3.57143 2.50009 3.57143C2.59011 3.57143 2.67639 3.53614 2.73967 3.47345L4.89834 1.34009Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":6}} className="outerDiv">
-          <div
-            id="0:1394"
-            style={{"marginLeft":16,"width":148,"minWidth":148,"height":null,"marginTop":-736,"marginBottom":696,"minHeight":40,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="706:1506"
+            style={{"marginLeft":40,"width":416,"minWidth":416,"height":null,"marginTop":40.000000000000014,"marginBottom":496,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1395"
-                  style={{"width":"106.08108108108108%","marginLeft":"0%","height":"100%","top":"0%","color":"rgba(0, 0, 0, 1)","fontSize":36,"fontWeight":400,"fontFamily":"Comfortaa","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.54px"}}
+                  id="I706:1506;699:1401"
+                  style={{"marginLeft":0,"marginRight":362,"flexGrow":1,"marginTop":0,"marginBottom":0,"color":"rgba(46, 58, 89, 1)","fontSize":20,"fontWeight":700,"fontFamily":"DM Sans","textAlign":"LEFT","fontStyle":"normal","lineHeight":"128.00000190734863%","letterSpacing":"-1px"}}
                   className="innerDiv"
                 >
                   <div>
-                    <span style={{}} key="end">Discover</span>
+                    <span style={{}} key="end">Arrow</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":3}} className="outerDiv">
+        <div style={{"zIndex":60}} className="outerDiv">
           <div
-            id="0:1008"
-            style={{"marginLeft":16,"width":132,"minWidth":132,"height":null,"marginTop":-664,"marginBottom":649,"minHeight":15,"color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
+            id="1393:1181"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
-              <span style={{}} key="end">What’s new today</span>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:764"
+                  style={{"marginLeft":7,"marginRight":7,"flexGrow":1,"marginTop":9.5,"marginBottom":9.5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 5L10 0L0 0L5 5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":2}} className="outerDiv">
+        <div style={{"zIndex":59}} className="outerDiv">
           <div
-            id="0:1006"
-            style={{"marginLeft":16,"width":343,"minWidth":343,"height":null,"marginTop":-625,"marginBottom":238,"minHeight":387,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:1185"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
-              <div style={{}} className="outerDiv">
+              <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1007"
-                  style={{"marginLeft":0,"width":343,"minWidth":343,"height":null,"marginTop":0,"marginBottom":44,"minHeight":343}}
+                  id="1393:762"
+                  style={{"marginLeft":9.5,"marginRight":9.5,"flexGrow":1,"marginTop":7,"marginBottom":7}}
                   className="innerDiv"
                 >
-                  <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/ecad/70ff/f8f8edebf56c61b2628058be61342c39">`}} />
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 5L5 10V0L0 5Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
-              <div style={{"zIndex":1}} className="outerDiv">
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":58}} className="outerDiv">
+          <div
+            id="1393:1117"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1356"
-                  style={{"marginLeft":0,"width":139,"minWidth":139,"height":null,"marginTop":-28,"marginBottom":0,"minHeight":28,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+                  id="1393:760"
+                  style={{"marginLeft":9.5,"marginRight":9.5,"flexGrow":1,"marginTop":7,"marginBottom":7}}
                   className="innerDiv"
                 >
-                  <div>
-                    <div style={{}} className="outerDiv centerer">
-                      <div
-                        id="0:1357"
-                        style={{"width":"66.90647482014388%","marginLeft":"25.899280575539567%","height":"53.57142857142857%","top":"0%","color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":700,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">Ridhwan Nordin</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":1}} className="outerDiv centerer">
-                      <div
-                        id="0:1358"
-                        style={{"width":"35.25179856115108%","marginLeft":"25.899280575539567%","height":"46.42857142857143%","top":"53.57142857142857%","color":"rgba(0, 0, 0, 1)","fontSize":11,"fontWeight":400,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">@ridzjcob</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":2}} className="outerDiv centerer">
-                      <div
-                        id="0:1359"
-                        style={{"width":"20.14388489208633%","marginLeft":"0%","height":"100%","top":"0%"}}
-                        className="innerDiv"
-                      >
-                        <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/0064/1ffe/951b7ec060ae1dde9ca24edc161eefa7">`}} />
-                      </div>
-                    </div>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 5L0 0L0 10L5 5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":57}} className="outerDiv">
+          <div
+            id="1393:1119"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:758"
+                  style={{"marginLeft":7,"marginRight":7,"flexGrow":1,"marginTop":9.5,"marginBottom":9.5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 0L0 5L10 5L5 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":56}} className="outerDiv">
+          <div
+            id="1393:1179"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:756"
+                  style={{"marginLeft":3.5150146484375,"marginRight":3.514986038208008,"flexGrow":1,"marginTop":7.049995422363281,"marginBottom":7.050004959106445}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1.4175L8.5 9.9175L17 1.4175L15.5835 1.91072e-06L8.5 7.0845L1.4165 1.91072e-06L0 1.4175Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":55}} className="outerDiv">
+          <div
+            id="1393:1183"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:754"
+                  style={{"marginLeft":7.04998779296875,"marginRight":7.050012588500977,"flexGrow":1,"marginTop":3.5149993896484375,"marginBottom":3.5149993896484375}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 0L0 8.5L8.5 17L9.9175 15.5835L2.833 8.5L9.9175 1.4165L8.5 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":54}} className="outerDiv">
+          <div
+            id="1393:1168"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:752"
+                  style={{"marginLeft":7.04998779296875,"marginRight":7.050012588500977,"flexGrow":1,"marginTop":3.5149993896484375,"marginBottom":3.5149993896484375}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.41753 17L9.91753 8.5L1.41753 0L2.48394e-05 1.4165L7.08453 8.5L2.48394e-05 15.5835L1.41753 17Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":53}} className="outerDiv">
+          <div
+            id="1393:1170"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-456,"marginBottom":432,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:750"
+                  style={{"marginLeft":3.5150146484375,"marginRight":3.514986038208008,"flexGrow":1,"marginTop":7.0500030517578125,"marginBottom":7.049997329711914}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 8.5L8.49997 0L-2.86608e-05 8.5L1.41647 9.9175L8.49997 2.833L15.5835 9.9175L17 8.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":45}} className="outerDiv">
+          <div
+            id="1393:1103"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:734"
+                  style={{"marginLeft":5.989990234375,"marginRight":5.989009857177734,"flexGrow":1,"marginTop":8.287994384765625,"marginBottom":8.28700590133667}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.47542 0L0 6.47542L1.5235 8L6.47973 3.04377L11.436 8L12.9519 6.47542L6.47542 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":51}} className="outerDiv">
+          <div
+            id="1393:1114"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:746"
+                  style={{"marginLeft":5.989990234375,"marginRight":5.990009307861328,"flexGrow":1,"marginTop":5.5749969482421875,"marginBottom":5.576003074645996}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.08063 13L0 6.91937L1.43062 5.48774L6.08468 10.1418L10.7387 5.48774L12.1613 6.91937L6.08164 13H6.08063ZM6.08063 7.51226L0 1.43062L1.43062 0L6.08468 4.65406L10.7387 0L12.1613 1.43062L6.08164 7.51125L6.08063 7.51226Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":50}} className="outerDiv">
+          <div
+            id="1393:834"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:744"
+                  style={{"marginLeft":5.57501220703125,"marginRight":5.575987815856934,"flexGrow":1,"marginTop":5.9900054931640625,"marginBottom":5.989994049072266}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.08063 12.1613L0 6.08063L6.08063 0L7.51226 1.43062L2.8582 6.08468L7.51226 10.7387L6.08164 12.1613H6.08063ZM11.5694 12.1613L5.48774 6.08063L11.5694 0L13 1.43062L8.34594 6.08468L13 10.7387L11.5704 12.1613H11.5694Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":49}} className="outerDiv">
+          <div
+            id="1393:835"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:742"
+                  style={{"marginLeft":5.57501220703125,"marginRight":5.575987815856934,"flexGrow":1,"marginTop":5.9900054931640625,"marginBottom":5.989994049072266}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.91937 12.1613L5.48774 10.7317L10.1418 6.07759L5.48774 1.42353L6.91937 0L13 6.08063L6.92038 12.1613H6.91937ZM1.43062 12.1613L0 10.7317L4.65406 6.07759L0 1.43062L1.43062 0L7.51226 6.08063L1.43163 12.1613H1.43062Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":48}} className="outerDiv">
+          <div
+            id="1393:836"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:740"
+                  style={{"marginLeft":5.989990234375,"marginRight":5.990009307861328,"flexGrow":1,"marginTop":5.5749969482421875,"marginBottom":5.575002670288086}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.42949 13L0 11.5685L6.08016 5.48732L12.1603 11.5685L10.7308 12.998L6.07712 8.34428L1.42342 12.998L1.42949 13ZM1.42949 7.51269L0 6.08016L6.08016 0L12.1603 6.08016L10.7308 7.51066L6.07712 2.85696L1.42342 7.51066L1.42949 7.51269Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":47}} className="outerDiv">
+          <div
+            id="1393:837"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:738"
+                  style={{"marginLeft":8.28802490234375,"marginRight":8.287975311279297,"flexGrow":1,"marginTop":5.9900054931640625,"marginBottom":5.989994049072266}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 6.47629L6.47629 12.9526L8 11.4289L3.0431 6.47198L8 1.51509L6.47629 0L0 6.47629Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":46}} className="outerDiv">
+          <div
+            id="1393:1099"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:736"
+                  style={{"marginLeft":8.28802490234375,"marginRight":8.286975383758545,"flexGrow":1,"marginTop":5.9900054931640625,"marginBottom":5.988994598388672}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 6.47542L1.5235 0L0 1.5235L4.95623 6.47973L0 11.4284L1.5235 12.9519L8 6.47542Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":52}} className="outerDiv">
+          <div
+            id="1393:1109"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-400,"marginBottom":376,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:748"
+                  style={{"marginLeft":5.989990234375,"marginRight":5.990009307861328,"flexGrow":1,"marginTop":8.287994384765625,"marginBottom":8.28700590133667}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.47542 8L12.9508 1.52458L11.4284 0L6.47542 4.95623L1.5235 0L0 1.5235L6.47542 8Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":37}} className="outerDiv">
+          <div
+            id="1393:1064"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:718"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM9.984 18H10C14.4167 17.9956 17.9942 14.4127 17.992 9.996C17.9898 5.57929 14.4087 2 9.992 2C5.57528 2 1.99421 5.57929 1.992 9.996C1.98979 14.4127 5.56729 17.9956 9.984 18ZM11 15H9V8.83L6.41 11.41L5 10L10 5L15 10L13.59 11.41L11 8.83V15Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":44}} className="outerDiv">
+          <div
+            id="1393:1069"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:732"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C17.995 5.58378 14.4162 2.00496 10 2ZM9.95 13.5L5 8.55L6.414 7.136L9.95 10.671L13.486 7.136L14.9 8.55L9.95 13.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":43}} className="outerDiv">
+          <div
+            id="1393:1074"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:730"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM10 2C5.6054 2.00111 2.03446 5.54686 2.00224 9.94135C1.97002 14.3358 5.48858 17.9336 9.88269 17.9991C14.2768 18.0647 17.9011 14.5735 18 10.18V11.963V10C17.995 5.58378 14.4162 2.00496 10 2ZM11.45 14.9L6.5 9.95L11.45 5L12.864 6.414L9.328 9.95L12.863 13.486L11.451 14.9H11.45Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":42}} className="outerDiv">
+          <div
+            id="1393:1148"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:728"
+                  style={{"marginLeft":2,"marginRight":2.0019969940185547,"flexGrow":1,"marginTop":1.9999847412109375,"marginBottom":1.9999980926513672}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99999 20C4.47966 19.9939 0.00606237 15.5203 0 10V9.80001C0.109931 4.30455 4.63458 -0.0720256 10.1307 0.000898217C15.6267 0.0738221 20.0337 4.5689 19.9978 10.0653C19.9619 15.5618 15.4966 19.9989 9.99999 20ZM9.99999 2.00002C5.58172 2.00002 2 5.58174 2 10C2 14.4183 5.58172 18 9.99999 18C14.4183 18 18 14.4183 18 10C17.995 5.58379 14.4162 2.00498 9.99999 2.00002ZM8.54999 15L7.13599 13.585L10.671 10.05L7.13599 6.51501L8.54999 5.10001L13.5 10.05L8.55099 15H8.54999Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":41}} className="outerDiv">
+          <div
+            id="1393:1152"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:726"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM9.984 18H10C14.4167 17.9956 17.9942 14.4127 17.992 9.996C17.9898 5.57929 14.4087 2 9.992 2C5.57528 2 1.99421 5.57929 1.992 9.996C1.98979 14.4127 5.56729 17.9956 9.984 18ZM6.514 12.864L5.1 11.45L10.05 6.5L15 11.45L13.586 12.863L10.05 9.328L6.515 12.864H6.514Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":40}} className="outerDiv">
+          <div
+            id="1393:1081"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:724"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C17.995 5.58378 14.4162 2.00496 10 2ZM10 15L5 10L6.41 8.59L9 11.17V5H11V11.17L13.59 8.59L15 10L10 15Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":39}} className="outerDiv">
+          <div
+            id="1393:1085"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:722"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C19.9939 15.5203 15.5203 19.9939 10 20ZM10 2C5.6054 2.00111 2.03446 5.54686 2.00224 9.94135C1.97002 14.3358 5.48858 17.9336 9.88269 17.9991C14.2768 18.0647 17.9011 14.5735 18 10.18V11.963V10C17.995 5.58378 14.4162 2.00496 10 2ZM10 15L5 10L10 5L11.41 6.41L8.83 9H15V11H8.83L11.41 13.59L10 15Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":38}} className="outerDiv">
+          <div
+            id="1393:1060"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-344,"marginBottom":320,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:720"
+                  style={{"marginLeft":2,"marginRight":2.0019969940185547,"flexGrow":1,"marginTop":1.9999847412109375,"marginBottom":1.9999980926513672}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99999 20C4.47966 19.9939 0.00606237 15.5203 0 10V9.80001C0.109931 4.30455 4.63458 -0.0720256 10.1307 0.000898217C15.6267 0.0738221 20.0337 4.5689 19.9978 10.0653C19.9619 15.5618 15.4966 19.9989 9.99999 20ZM9.99999 2.00002C5.58172 2.00002 2 5.58174 2 10C2 14.4183 5.58172 18 9.99999 18C14.4183 18 18 14.4183 18 10C17.995 5.58379 14.4162 2.00498 9.99999 2.00002ZM9.99999 15L8.58999 13.59L11.17 11H5V9.00001H11.17L8.58999 6.41001L9.99999 5.00001L15 10L9.99999 15Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":35}} className="outerDiv">
+          <div
+            id="1393:1145"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:714"
+                  style={{"marginLeft":6.14398193359375,"marginRight":6.141017913818359,"flexGrow":1,"marginTop":5.989990234375,"marginBottom":5.990009307861328}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5506 12.3124L4.39232 6.15621L10.5506 0L12 1.4484L7.28809 6.16031L12 10.8722L10.5506 12.3124ZM2.04866 12.3022H0V0.0102433H2.04866V12.3022Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":30}} className="outerDiv">
+          <div
+            id="1393:838"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:704"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":7,"marginBottom":7}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83 4L6.41 1.41L5 0L0 5L5 10L6.41 8.59L3.83 6H20V4H3.83Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
@@ -339,457 +613,307 @@ class CDiscover0D1003 extends PureComponent {
         </div>
         <div style={{"zIndex":4}} className="outerDiv">
           <div
-            id="0:1009"
-            style={{"marginLeft":16,"width":84,"minWidth":84,"height":null,"marginTop":-190,"marginBottom":175,"minHeight":15,"color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
+            id="1393:863"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
-              <span style={{}} key="end">Browse all</span>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:652"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":8.5,"marginBottom":8.5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="7" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 7L20 3.5L16.5 0L15.793 0.707L18.086 3H0V4H18.086L15.793 6.293L16.5 7Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":1}} className="outerDiv">
+        <div style={{"zIndex":34}} className="outerDiv">
           <div
-            id="0:1005"
-            style={{"marginLeft":16,"width":167,"minWidth":167,"height":null,"marginTop":-151,"marginBottom":-69,"minHeight":220}}
+            id="1393:1172"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/69db/d055/273e7d268b2700ff4e4ec2acb04a6518">`}} />
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:712"
+                  style={{"marginLeft":6.14398193359375,"marginRight":6.1420183181762695,"flexGrow":1,"marginTop":5.989990234375,"marginBottom":5.990009307861328}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.44852 12.3135L0 10.866L4.71231 6.15366L0 1.44852L1.44852 0L7.60628 6.15674L1.44955 12.3135H1.44852ZM12 12.3032H9.95117V0.0102441H12V12.3032Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":29}} className="outerDiv">
+          <div
+            id="1393:1133"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:702"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":7,"marginBottom":7}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.17 6L13.59 8.59L15 10L20 5L15 0L13.59 1.41L16.17 4H0V6H16.17Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":33}} className="outerDiv">
+          <div
+            id="1393:1176"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:710"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.021 10.55L2.014 7H0V14H7V11.986L3.45 11.979L14 1.429L12.571 0L2.021 10.55Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":31}} className="outerDiv">
+          <div
+            id="1393:1166"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:706"
+                  style={{"marginLeft":7,"marginRight":7,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16.17L1.41 13.59L0 15L5 20L10 15L8.59 13.59L6 16.17V0H4V16.17Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":32}} className="outerDiv">
+          <div
+            id="1393:1159"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-288,"marginBottom":264,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:708"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.979 3.45L11.986 7H14L14 0H7V2.014L10.55 2.021L0 12.571L1.429 14L11.979 3.45Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div style={{"zIndex":5}} className="outerDiv">
           <div
-            id="0:1010"
-            style={{"marginLeft":192,"width":167,"minWidth":167,"height":null,"marginTop":-151,"marginBottom":-159,"minHeight":310}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/5509/7082/55876ff2e4dcab4b60a66d54eaa5fdff">`}} />
-          </div>
-        </div>
-        <div style={{}} className="outerDiv maxer">
-          <div
-            id="0:1003"
-            style={{"backgroundColor":null,"overflow":"hidden","width":"100%","pointerEvents":"none"}}
-            className="innerDiv"
-          >
-            <div style={{"zIndex":7}} className="outerDiv">
-              <div
-                id="0:1323"
-                style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":729,"marginBottom":0,"minHeight":83,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                className="innerDiv"
-              >
-                <div>
-                  <div style={{}} className="outerDiv centerer">
-                    <div
-                      id="0:1324"
-                      style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                        <div style={{}} className="outerDiv centerer">
-                          <div
-                            id="0:1325"
-                            style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","boxShadow":"0px -0.5px 0px rgba(0, 0, 0, 0.30000001192092896)"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":1}} className="outerDiv centerer">
-                          <div
-                            id="0:1326"
-                            style={{"width":"10.666666666666666%","marginLeft":"2.933333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":4}} className="outerDiv">
-                                <div
-                                  id="0:1333"
-                                  style={{"marginLeft":12,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":13,"marginBottom":18.514719009399414,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":3}} className="outerDiv">
-                                <div
-                                  id="0:1332"
-                                  style={{"marginLeft":19.0703125,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":-26.9998779296875,"marginBottom":18.514596939086914,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1328"
-                                  style={{"marginLeft":13.77734375,"width":1,"minWidth":1,"height":null,"marginTop":-20.943603515625,"marginBottom":13.943603515625,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1329"
-                                  style={{"marginLeft":24.77734375,"width":1,"minWidth":1,"height":null,"marginTop":-20.943603515625,"marginBottom":13.943603515625,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":8}} className="outerDiv">
-                                <div
-                                  id="0:1336"
-                                  style={{"marginLeft":17.77734375,"width":4,"minWidth":4,"height":null,"marginTop":-18.943603515625,"marginBottom":17.943603515625,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":6}} className="outerDiv">
-                                <div
-                                  id="0:1334"
-                                  style={{"marginLeft":17.77734375,"width":1,"minWidth":1,"height":null,"marginTop":-17.943603515625,"marginBottom":13.943603515625,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":7}} className="outerDiv">
-                                <div
-                                  id="0:1335"
-                                  style={{"marginLeft":20.77734375,"width":1,"minWidth":1,"height":null,"marginTop":-17.943603515625,"marginBottom":13.943603515625,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2}} className="outerDiv">
-                                <div
-                                  id="0:1330"
-                                  style={{"marginLeft":13.77734375,"width":12,"minWidth":12,"height":null,"marginTop":-13.943603515625,"marginBottom":12.943603515625,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":2}} className="outerDiv centerer">
-                          <div
-                            id="0:1337"
-                            style={{"width":"10.666666666666666%","marginLeft":"21.866666666666667%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1339"
-                                  style={{"marginLeft":12,"width":13,"minWidth":13,"height":null,"marginTop":12,"marginBottom":15,"minHeight":13}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5Z" stroke="black" stroke-linecap="square"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1340"
-                                  style={{"marginLeft":22.5,"width":5,"minWidth":5,"height":null,"marginTop":-17.5,"marginBottom":12.5,"minHeight":5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.371658 0.371658L5.62826 5.62826" stroke="black"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":3}} className="outerDiv centerer">
-                          <div
-                            id="0:1341"
-                            style={{"width":"18.666666666666668%","marginLeft":"40.8%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv centerer">
-                                <div
-                                  id="0:1342"
-                                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","background":"linear-gradient(-2.7547169039247232rad, rgba(255, 0, 214, 1) 0%, rgba(255, 77, 0, 1) 100%)","borderRadius":"20px 20px 20px 20px"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1344"
-                                  style={{"width":1,"marginLeft":0,"height":13,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1345"
-                                  style={{"width":13,"marginLeft":0,"height":1,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":4}} className="outerDiv centerer">
-                          <div
-                            id="0:1346"
-                            style={{"width":"10.666666666666666%","marginLeft":"67.73333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1349"
-                                  style={{"marginLeft":12,"width":16,"minWidth":16,"height":null,"marginTop":12,"marginBottom":12,"minHeight":16}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="8" transform="matrix(-1 0 0 1 8 8)" fill="#DADADA"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1350"
-                                  style={{"marginLeft":10,"width":8,"minWidth":8,"height":null,"marginTop":-18.5,"marginBottom":12,"minHeight":6.5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 0L8 5.5L0 6.5L4 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":5}} className="outerDiv centerer">
-                          <div
-                            id="0:1351"
-                            style={{"width":"10.666666666666666%","marginLeft":"86.4%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1354"
-                                  style={{"marginLeft":16.3046875,"width":7.826148986816406,"minWidth":7.826148986816406,"height":null,"marginTop":12,"marginBottom":20.17391300201416,"minHeight":7.82608699798584}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="4.5" cy="4.49997" rx="3.99015" ry="3.99012" stroke="black" stroke-linecap="square"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1353"
-                                  style={{"marginLeft":15,"width":10.434782981872559,"minWidth":10.434782981872559,"height":null,"marginTop":-19.521728515625,"marginBottom":12.999989032745361,"minHeight":6.521739482879639}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 0.524715C2.97608 0.524715 0.524715 2.97608 0.524715 6V7.36882H11.4753V6C11.4753 2.97608 9.02392 0.524715 6 0.524715Z" stroke="black"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div style={{"zIndex":1}} className="outerDiv centerer">
-                    <div
-                      id="0:1355"
-                      style={{"width":"36%","marginLeft":"32%","height":"6.024096385542169%","top":"84.33734939759036%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class CLoggedout0D920 extends PureComponent {
-  render() {
-    return (
-      <div>
-        <div style={{"zIndex":4}} className="outerDiv">
-          <div
-            id="0:942"
-            style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":0,"marginBottom":105,"minHeight":707}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/ce4c/9d9d/90ad6b272045841647175c995b172824">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":6}} className="outerDiv">
-          <div
-            id="0:945"
-            style={{"marginLeft":142,"width":148,"minWidth":148,"height":null,"marginTop":-505,"marginBottom":451,"minHeight":54,"color":"rgba(0, 0, 0, 1)","fontSize":48,"fontWeight":400,"fontFamily":"Comfortaa","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.72px"}}
-            className="innerDiv"
-          >
-            <div>
-              <span style={{}} key="end">photo</span>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":7}} className="outerDiv">
-          <div
-            id="0:947"
-            style={{"marginLeft":84,"width":38,"minWidth":38,"height":null,"marginTop":-500,"marginBottom":488.740740776062,"minHeight":11.259259223937988}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0H26.7407L38 11.2593H11.2593L0 0Z" fill="#C4C4C4"/>
-</svg>
-`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":8}} className="outerDiv">
-          <div
-            id="0:948"
-            style={{"marginLeft":84,"width":11.259259223937988,"minWidth":11.259259223937988,"height":null,"marginTop":-500,"marginBottom":462,"minHeight":38}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="38" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.2588 38L11.2588 11.2593L-0.000470161 0L-0.000470161 26.7407L11.2588 38Z" fill="#C4C4C4"/>
-</svg>
-`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":11}} className="outerDiv">
-          <div
-            id="0:951"
-            style={{"marginLeft":110.7412109375,"width":11.259259223937988,"minWidth":11.259259223937988,"height":null,"marginTop":-500,"marginBottom":462,"minHeight":38}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="38" viewBox="0 0 12 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0L0 26.7407L11.2593 38L11.2593 11.2593L0 0Z" fill="#C4C4C4"/>
-</svg>
-`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":10}} className="outerDiv">
-          <div
-            id="0:950"
-            style={{"marginLeft":84,"width":38,"minWidth":38,"height":null,"marginTop":-473.25927734375,"marginBottom":462.000018119812,"minHeight":11.259259223937988}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="38" height="12" viewBox="0 0 38 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M38 11.2593L11.2593 11.2593L0 1.81198e-05L26.7407 1.81198e-05L38 11.2593Z" fill="#C4C4C4"/>
-</svg>
-`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":14}} className="outerDiv">
-          <div
-            id="0:1300"
-            style={{"marginLeft":16,"width":139,"minWidth":139,"height":null,"marginTop":-153,"marginBottom":125,"minHeight":28,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:862"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1301"
-                  style={{"width":"74.10071942446044%","marginLeft":"25.899280575539567%","height":"53.57142857142857%","top":"0%","color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":700,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
+                  id="1393:654"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":8.5,"marginBottom":8.5}}
                   className="innerDiv"
                 >
-                  <div>
-                    <span style={{}} key="end">Pawel Czerwinski</span>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
-                <div
-                  id="0:1302"
-                  style={{"width":"69.06474820143885%","marginLeft":"25.899280575539567%","height":"46.42857142857143%","top":"53.57142857142857%","color":"rgba(0, 0, 0, 1)","fontSize":11,"fontWeight":400,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <span style={{}} key="end">@pawel_czerwinski</span>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":2}} className="outerDiv centerer">
-                <div
-                  id="0:1303"
-                  style={{"width":"20.14388489208633%","marginLeft":"0%","height":"100%","top":"0%"}}
-                  className="innerDiv"
-                >
-                  <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9e02/d8be/005651316a6f6f5b5d66edf6f2373018">`}} />
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="7" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.5 0L0 3.5L3.5 7L4.207 6.293L1.914 4H20V3H1.914L4.207 0.707L3.5 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":2}} className="outerDiv">
+        <div style={{"zIndex":27}} className="outerDiv">
           <div
-            id="0:1294"
-            style={{"marginLeft":16,"width":167,"minWidth":167,"height":null,"marginTop":-85,"marginBottom":33,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:840"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1295"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","border":"2px solid rgba(0, 0, 0, 1)","borderRadius":"6px 6px 6px 6px"}}
+                  id="1393:698"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":5,"marginBottom":5}}
                   className="innerDiv"
                 >
-                  <div>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.45 2.021L7 2.014V0L0 0V7H2.014L2.021 3.45L12.571 14L14 12.571L3.45 2.021Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":26}} className="outerDiv">
+          <div
+            id="1393:841"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1296"
-                  style={{"width":"26.347305389221557%","marginLeft":"36.52694610778443%","height":"28.846153846153847%","top":"36.53846153846154%","color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
+                  id="1393:696"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":5,"marginBottom":5}}
                   className="innerDiv"
                 >
-                  <div>
-                    <span style={{}} key="end">log in</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.979 3.45L11.986 7H14L14 0H7V2.014L10.55 2.021L0 12.571L1.429 14L11.979 3.45Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":25}} className="outerDiv">
+          <div
+            id="1393:842"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:694"
+                  style={{"marginLeft":6,"marginRight":6,"flexGrow":1,"marginTop":4,"marginBottom":4}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12.17L1.41 8.59L0 10L6 16L12 10L10.59 8.59L7 12.17V0H5V12.17Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":24}} className="outerDiv">
+          <div
+            id="1393:843"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:692"
+                  style={{"marginLeft":4,"marginRight":4,"flexGrow":1,"marginTop":6,"marginBottom":6}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.83 5L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H16V5H3.83Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":23}} className="outerDiv">
+          <div
+            id="1393:844"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:690"
+                  style={{"marginLeft":4,"marginRight":4,"flexGrow":1,"marginTop":6,"marginBottom":6}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.17 7L8.59 10.59L10 12L16 6L10 0L8.59 1.41L12.17 5H0V7H12.17Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":22}} className="outerDiv">
+          <div
+            id="1393:845"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:688"
+                  style={{"marginLeft":6,"marginRight":6,"flexGrow":1,"marginTop":4,"marginBottom":4}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 3.83L10.59 7.41L12 6L6 0L0 6L1.41 7.41L5 3.83V16H7V3.83Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":28}} className="outerDiv">
+          <div
+            id="1393:839"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-232,"marginBottom":208,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:700"
+                  style={{"marginLeft":7,"marginRight":7,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 3.83L8.59 6.41L10 5L5 0L0 5L1.41 6.41L4 3.83V20H6V3.83Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
@@ -797,1153 +921,241 @@ class CLoggedout0D920 extends PureComponent {
         </div>
         <div style={{"zIndex":3}} className="outerDiv">
           <div
-            id="0:1297"
-            style={{"marginLeft":192,"width":167,"minWidth":167,"height":null,"marginTop":-85,"marginBottom":33,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:864"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1298"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(0, 0, 0, 1)","borderRadius":"6px 6px 6px 6px"}}
+                  id="1393:650"
+                  style={{"marginLeft":8.5,"marginRight":8.5,"flexGrow":1,"marginTop":2,"marginBottom":2}}
                   className="innerDiv"
                 >
-                  <div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
-                <div
-                  id="0:1299"
-                  style={{"width":"38.92215568862275%","marginLeft":"30.538922155688624%","height":"28.846153846153847%","top":"36.53846153846154%","color":"rgba(255, 255, 255, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <span style={{}} key="end">register</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="7" height="20" viewBox="0 0 7 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 3.5L3.5 0L0 3.5L0.707 4.207L3 1.914V20H4V1.914L6.293 4.207L7 3.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":1}} className="outerDiv">
+        <div style={{"zIndex":19}} className="outerDiv">
           <div
-            id="0:941"
-            style={{"marginLeft":243,"width":65,"minWidth":65,"height":null,"marginTop":-83,"marginBottom":67,"minHeight":16,"color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":700,"fontFamily":"SF Pro Text","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.195px"}}
+            id="1393:848"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
-              <span style={{}} key="end">register</span>
-            </div>
-          </div>
-        </div>
-        <div style={{}} className="outerDiv centerer">
-          <div
-            id="0:922"
-            style={{"width":"100%","marginLeft":"0%","height":"5.41871921182266%","top":"0%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-            className="innerDiv"
-          >
-            <div>
-              <div style={{"zIndex":1}} className="outerDiv">
+              <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:939"
-                  style={{"marginLeft":21,"width":56,"minWidth":56,"height":null,"marginTop":8,"marginBottom":13,"minHeight":23,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+                  id="1393:682"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":8,"marginBottom":8}}
                   className="innerDiv"
                 >
-                  <div>
-                    <div style={{"alignItems":"center"}} className="outerDiv centerer">
-                      <div
-                        id="0:940"
-                        style={{"marginLeft":0.3330078125,"marginRight":1.6669921875,"flexGrow":1,"height":18,"marginTop":7,"color":"rgba(0, 0, 0, 1)","fontSize":15,"fontWeight":600,"fontFamily":"SF Pro Text","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.3333333432674408px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">9:27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                <div
-                  id="0:923"
-                  style={{"marginRight":14,"width":68,"minWidth":68,"height":null,"marginTop":-29,"marginBottom":13,"minHeight":16,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:924"
-                        style={{"marginRight":0,"width":25,"minWidth":25,"height":null,"marginTop":2,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:925"
-                              style={{"width":"88%","marginLeft":"0%","height":"94.44444179534912%","top":"2.777862548828125%","border":"1px solid rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:926"
-                              style={{"width":"5.333333492279053%","marginLeft":"92%","height":"33.333333333333336%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="2" height="4" viewBox="0 0 2 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.4" d="M0 0V4C0.80794 3.66122 1.33333 2.87313 1.33333 2C1.33333 1.12687 0.80794 0.338777 0 0Z" fill="black"/>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 8V5L20 5V3L4 3L4 0L0 4L4 8Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:927"
-                              style={{"width":"72%","marginLeft":"8%","height":"61.111112435658775%","top":"19.444529215494793%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":2,"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:933"
-                        style={{"marginRight":50,"width":18,"minWidth":18,"height":null,"marginTop":-14,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:935"
-                              style={{"width":"16.666666666666668%","marginLeft":"3.7055121527777777%","height":"33.333333333333336%","top":"61.110941569010414%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="4" viewBox="0 0 3 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V3C3 3.55228 2.55228 4 2 4H1C0.447715 4 0 3.55228 0 3V1C0 0.447715 0.447715 0 1 0H2Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:936"
-                              style={{"width":"16.666666666666668%","marginLeft":"29.63324652777778%","height":"50%","top":"44.44427490234375%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="6" viewBox="0 0 3 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V5C3 5.55228 2.55228 6 2 6H1C0.447715 6 0 5.55228 0 5V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:937"
-                              style={{"width":"16.666666666666668%","marginLeft":"55.55555555555556%","height":"69.44444179534912%","top":"25%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="9" viewBox="0 0 3 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V7.33333C3 7.88562 2.55228 8.33333 2 8.33333H1C0.447715 8.33333 0 7.88562 0 7.33333V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":3}} className="outerDiv centerer">
-                            <div
-                              id="0:938"
-                              style={{"width":"16.666666666666668%","marginLeft":"81.48328993055556%","height":"88.88889153798421%","top":"5.555470784505208%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="11" viewBox="0 0 3 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V9.66667C3 10.219 2.55228 10.6667 2 10.6667H1C0.447715 10.6667 0 10.219 0 9.66667V1C0 0.447715 0.447715 0 1 0L2 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":1}} className="outerDiv centerer">
-                      <div
-                        id="0:928"
-                        style={{"width":"30.88235294117647%","marginLeft":"29.41176470588235%","height":"93.75%","top":"6.25%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:930"
-                              style={{"width":"73.01587150210426%","marginLeft":"12.699962797619047%","height":"31.11111005147298%","top":"8.888956705729166%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="5" viewBox="0 0 16 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00044 2.33798C10.3219 2.33808 12.5546 3.21219 14.2371 4.77966C14.3638 4.90067 14.5663 4.89914 14.691 4.77623L15.9021 3.57849C15.9653 3.51616 16.0005 3.43171 16 3.34385C15.9995 3.25599 15.9632 3.17196 15.8993 3.11035C11.4834 -1.03678 4.51678 -1.03678 0.100859 3.11035C0.0368916 3.17192 0.000597157 3.25592 7.30289e-06 3.34378C-0.000582551 3.43164 0.0345808 3.51611 0.0977163 3.57849L1.30914 4.77623C1.43384 4.89933 1.6365 4.90086 1.76312 4.77966C3.44579 3.21209 5.67874 2.33797 8.00044 2.33798Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:931"
-                              style={{"width":"47.61904761904762%","marginLeft":"25.399925595238095%","height":"24.444444974263508%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.99881 2.29945C6.22254 2.29938 7.4026 2.75598 8.3097 3.58054C8.43238 3.69756 8.62565 3.69502 8.74525 3.57482L9.90583 2.39766C9.96695 2.33591 10.0009 2.25215 9.99998 2.16511C9.9991 2.07807 9.9635 1.99502 9.90114 1.93453C7.13886 -0.644844 2.86111 -0.644844 0.0988288 1.93453C0.0364329 1.99502 0.000833291 2.07811 1.44426e-05 2.16518C-0.000804405 2.25225 0.0332261 2.336 0.0944733 2.39766L1.25472 3.57482C1.37432 3.69502 1.56759 3.69756 1.69028 3.58054C2.59677 2.75652 3.77589 2.29996 4.99881 2.29945Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:932"
-                              style={{"width":"22.222221465337846%","marginLeft":"38.095238095238095%","height":"22.222221692403156%","top":"60%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.89834 1.34009C4.96508 1.27595 5.00184 1.18767 4.99993 1.09612C4.99802 1.00456 4.95761 0.91783 4.88825 0.856407C3.50964 -0.285469 1.49054 -0.285469 0.111933 0.856407C0.0425245 0.917781 0.00205366 1.00448 7.6004e-05 1.09604C-0.00190165 1.1876 0.0347892 1.2759 0.101485 1.34009L2.26052 3.47345C2.3238 3.53614 2.41007 3.57143 2.50009 3.57143C2.59011 3.57143 2.67639 3.53614 2.73967 3.47345L4.89834 1.34009Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{"zIndex":5}} className="outerDiv centerer">
+        <div style={{"zIndex":18}} className="outerDiv">
           <div
-            id="0:943"
-            style={{"width":"36%","marginLeft":"32%","height":"0.6157635467980296%","top":"98.39901477832512%","backgroundColor":"rgba(0, 0, 0, 1)"}}
+            id="1393:849"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:680"
+                  style={{"marginLeft":2,"marginRight":2,"flexGrow":1,"marginTop":8,"marginBottom":8}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0V3H0V5H16V8L20 4L16 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
-}
-
-class CSearch0D952 extends PureComponent {
-  render() {
-    return (
-      <div>
+        <div style={{"zIndex":17}} className="outerDiv">
+          <div
+            id="1393:850"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:678"
+                  style={{"marginLeft":8,"marginRight":8,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 4H3L3 20H5L5 4H8L4 0L0 4Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":16}} className="outerDiv">
+          <div
+            id="1393:851"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:676"
+                  style={{"marginLeft":4,"marginRight":4,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 0V8H3.83L6.41 5.41L5 4L0 9L5 14L6.41 12.59L3.83 10H16V0H14Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div style={{"zIndex":15}} className="outerDiv">
           <div
-            id="0:1209"
-            style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":0,"marginBottom":768,"minHeight":44,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-            className="innerDiv"
-          >
-            <div>
-              <div style={{"zIndex":1}} className="outerDiv">
-                <div
-                  id="0:1226"
-                  style={{"marginLeft":21,"width":56,"minWidth":56,"height":null,"marginTop":8,"marginBottom":13,"minHeight":23,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"alignItems":"center"}} className="outerDiv centerer">
-                      <div
-                        id="0:1227"
-                        style={{"marginLeft":0.3330078125,"marginRight":1.6669921875,"flexGrow":1,"height":18,"marginTop":7,"color":"rgba(0, 0, 0, 1)","fontSize":15,"fontWeight":600,"fontFamily":"SF Pro Text","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.3333333432674408px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">9:27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                <div
-                  id="0:1210"
-                  style={{"marginRight":14,"width":68,"minWidth":68,"height":null,"marginTop":-29,"marginBottom":13,"minHeight":16,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1211"
-                        style={{"marginRight":0,"width":25,"minWidth":25,"height":null,"marginTop":2,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1212"
-                              style={{"width":"88%","marginLeft":"0%","height":"94.44444179534912%","top":"2.777862548828125%","border":"1px solid rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1213"
-                              style={{"width":"5.333333492279053%","marginLeft":"92%","height":"33.333333333333336%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="2" height="4" viewBox="0 0 2 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.4" d="M0 0V4C0.80794 3.66122 1.33333 2.87313 1.33333 2C1.33333 1.12687 0.80794 0.338777 0 0Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1214"
-                              style={{"width":"72%","marginLeft":"8%","height":"61.111112435658775%","top":"19.44427490234375%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":2,"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1220"
-                        style={{"marginRight":50,"width":18,"minWidth":18,"height":null,"marginTop":-14,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1222"
-                              style={{"width":"16.666666666666668%","marginLeft":"3.7055121527777777%","height":"33.333333333333336%","top":"61.110941569010414%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="4" viewBox="0 0 3 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V3C3 3.55228 2.55228 4 2 4H1C0.447715 4 0 3.55228 0 3V1C0 0.447715 0.447715 0 1 0H2Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1223"
-                              style={{"width":"16.666666666666668%","marginLeft":"29.63324652777778%","height":"50%","top":"44.44427490234375%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="6" viewBox="0 0 3 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V5C3 5.55228 2.55228 6 2 6H1C0.447715 6 0 5.55228 0 5V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1224"
-                              style={{"width":"16.666666666666668%","marginLeft":"55.55555555555556%","height":"69.44444179534912%","top":"25%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="9" viewBox="0 0 3 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V7.33333C3 7.88562 2.55228 8.33333 2 8.33333H1C0.447715 8.33333 0 7.88562 0 7.33333V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":3}} className="outerDiv centerer">
-                            <div
-                              id="0:1225"
-                              style={{"width":"16.666666666666668%","marginLeft":"81.48328993055556%","height":"88.88889153798421%","top":"5.555470784505208%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="11" viewBox="0 0 3 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V9.66667C3 10.219 2.55228 10.6667 2 10.6667H1C0.447715 10.6667 0 10.219 0 9.66667V1C0 0.447715 0.447715 0 1 0L2 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":1}} className="outerDiv centerer">
-                      <div
-                        id="0:1215"
-                        style={{"width":"30.88235294117647%","marginLeft":"29.41176470588235%","height":"93.75%","top":"6.25%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1217"
-                              style={{"width":"73.01587150210426%","marginLeft":"12.699962797619047%","height":"31.11111005147298%","top":"8.888956705729166%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="5" viewBox="0 0 16 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00044 2.33798C10.3219 2.33808 12.5546 3.21219 14.2371 4.77966C14.3638 4.90067 14.5663 4.89914 14.691 4.77623L15.9021 3.57849C15.9653 3.51616 16.0005 3.43171 16 3.34385C15.9995 3.25599 15.9632 3.17196 15.8993 3.11035C11.4834 -1.03678 4.51678 -1.03678 0.100859 3.11035C0.0368916 3.17192 0.000597157 3.25592 7.30289e-06 3.34378C-0.000582551 3.43164 0.0345808 3.51611 0.0977163 3.57849L1.30914 4.77623C1.43384 4.89933 1.6365 4.90086 1.76312 4.77966C3.44579 3.21209 5.67874 2.33797 8.00044 2.33798Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1218"
-                              style={{"width":"47.61904761904762%","marginLeft":"25.399925595238095%","height":"24.444444974263508%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.99881 2.29945C6.22254 2.29938 7.4026 2.75598 8.3097 3.58054C8.43238 3.69756 8.62565 3.69502 8.74525 3.57482L9.90583 2.39766C9.96695 2.33591 10.0009 2.25215 9.99998 2.16511C9.9991 2.07807 9.9635 1.99502 9.90114 1.93453C7.13886 -0.644844 2.86111 -0.644844 0.0988288 1.93453C0.0364329 1.99502 0.000833291 2.07811 1.44426e-05 2.16518C-0.000804405 2.25225 0.0332261 2.336 0.0944733 2.39766L1.25472 3.57482C1.37432 3.69502 1.56759 3.69756 1.69028 3.58054C2.59677 2.75652 3.77589 2.29996 4.99881 2.29945Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1219"
-                              style={{"width":"22.222221465337846%","marginLeft":"38.095238095238095%","height":"22.222221692403156%","top":"60%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.89834 1.34009C4.96508 1.27595 5.00184 1.18767 4.99993 1.09612C4.99802 1.00456 4.95761 0.91783 4.88825 0.856407C3.50964 -0.285469 1.49054 -0.285469 0.111933 0.856407C0.0425245 0.917781 0.00205366 1.00448 7.6004e-05 1.09604C-0.00190165 1.1876 0.0347892 1.2759 0.101485 1.34009L2.26052 3.47345C2.3238 3.53614 2.41007 3.57143 2.50009 3.57143C2.59011 3.57143 2.67639 3.53614 2.73967 3.47345L4.89834 1.34009Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{}} className="outerDiv">
-          <div
-            id="0:1976"
-            style={{"marginLeft":16,"width":148,"minWidth":148,"height":null,"marginTop":-736,"marginBottom":696,"minHeight":40,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:852"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1977"
-                  style={{"width":"86.48648648648648%","marginLeft":"0%","height":"100%","top":"0%","color":"rgba(0, 0, 0, 1)","fontSize":36,"fontWeight":400,"fontFamily":"Comfortaa","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.54px"}}
+                  id="1393:674"
+                  style={{"marginLeft":4,"marginRight":4,"flexGrow":1,"marginTop":5,"marginBottom":5}}
                   className="innerDiv"
                 >
-                  <div>
-                    <span style={{}} key="end">Search</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 0V8H12.17L9.59 5.41L11 4L16 9L11 14L9.59 12.59L12.17 10H0V0H2Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div style={{"zIndex":1}} className="outerDiv">
-          <div
-            id="0:1973"
-            style={{"width":"91.46666666666667%","marginLeft":"4.266666666666667%","height":null,"marginTop":-664,"marginBottom":612,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-            className="innerDiv"
-          >
-            <div>
-              <div style={{}} className="outerDiv centerer">
-                <div
-                  id="0:1974"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","border":"2px solid rgba(0, 0, 0, 1)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
-                <div
-                  id="0:1975"
-                  style={{"width":"9.912536443148689%","marginLeft":"4.956268221574344%","height":"34.61538461538461%","top":"32.69230769230769%","color":"rgba(0, 0, 0, 1)","fontSize":15,"fontWeight":400,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0px"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <span style={{}} key="end">dogs</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":2}} className="outerDiv">
-          <div
-            id="0:953"
-            style={{"marginLeft":16,"width":86,"minWidth":86,"height":null,"marginTop":-580,"marginBottom":565,"minHeight":15,"color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"LEFT","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
-            className="innerDiv"
-          >
-            <div>
-              <span style={{}} key="end">all results</span>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":4}} className="outerDiv">
-          <div
-            id="0:955"
-            style={{"marginLeft":134,"width":107,"minWidth":107,"height":null,"marginTop":-541,"marginBottom":434,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/e459/8d26/b1524f8371c3f9594000b7f1ae2acaea">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":5}} className="outerDiv">
-          <div
-            id="0:956"
-            style={{"marginLeft":252,"width":107,"minWidth":107,"height":null,"marginTop":-541,"marginBottom":434,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9652/1205/9c49e219d04e82c2321818d251c8a9cb">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":3}} className="outerDiv">
-          <div
-            id="0:954"
-            style={{"marginLeft":16,"width":107,"minWidth":107,"height":null,"marginTop":-541,"marginBottom":434,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/eed5/884e/c48daad2850a3b08d1b5f4491d0ffb35">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":7}} className="outerDiv">
-          <div
-            id="0:958"
-            style={{"marginLeft":134,"width":107,"minWidth":107,"height":null,"marginTop":-423,"marginBottom":316,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9c77/e3b9/50d2d3a020a880a4d3418cf49f593db6">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":8}} className="outerDiv">
-          <div
-            id="0:959"
-            style={{"marginLeft":252,"width":107,"minWidth":107,"height":null,"marginTop":-423,"marginBottom":316,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/4a78/6c34/7bff2a06a5b1cba8f35e90151bfbc2d0">`}} />
           </div>
         </div>
         <div style={{"zIndex":6}} className="outerDiv">
           <div
-            id="0:957"
-            style={{"marginLeft":16,"width":107,"minWidth":107,"height":null,"marginTop":-423,"marginBottom":316,"minHeight":107}}
+            id="1393:861"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/0951/b59c/895fb6d3216a1378199e85b38eef2a80">`}} />
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:656"
+                  style={{"marginLeft":8.5,"marginRight":8.5,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="7" height="20" viewBox="0 0 7 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 16.5L3.5 20L7 16.5L6.293 15.793L4 18.086V0H3V18.086L0.707 15.793L0 16.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div style={{"zIndex":10}} className="outerDiv">
+        <div style={{"zIndex":20}} className="outerDiv">
           <div
-            id="0:961"
-            style={{"marginLeft":134,"width":107,"minWidth":107,"height":null,"marginTop":-305,"marginBottom":198,"minHeight":107}}
+            id="1393:847"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-176,"marginBottom":152,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/1537/c878/8225838ab02fb7ea0506b6ae448c0d7f">`}} />
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:684"
+                  style={{"marginLeft":8,"marginRight":8,"flexGrow":1,"marginTop":2,"marginBottom":2}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="20" viewBox="0 0 8 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 16H5L5 0L3 0L3 16H0L4 20L8 16Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div style={{"zIndex":11}} className="outerDiv">
           <div
-            id="0:962"
-            style={{"marginLeft":252,"width":107,"minWidth":107,"height":null,"marginTop":-305,"marginBottom":198,"minHeight":107}}
+            id="1393:856"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/6fbb/2a6b/47325bdaec1082f15c83eb58a2a8185e">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":9}} className="outerDiv">
-          <div
-            id="0:960"
-            style={{"marginLeft":16,"width":107,"minWidth":107,"height":null,"marginTop":-305,"marginBottom":198,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/f701/5503/37af2fd467c0a68992f8938c9f4be88b">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":12}} className="outerDiv">
-          <div
-            id="0:963"
-            style={{"marginLeft":16,"width":107,"minWidth":107,"height":null,"marginTop":-187,"marginBottom":80,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/9623/f383/b28608bde8a48459d6743b51f81db877">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":13}} className="outerDiv">
-          <div
-            id="0:964"
-            style={{"marginLeft":134,"width":107,"minWidth":107,"height":null,"marginTop":-187,"marginBottom":80,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/21af/724c/bac9b0d437378e166687ed90fb9daa7f">`}} />
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:666"
+                  style={{"marginLeft":6.5,"marginRight":4.5,"flexGrow":1,"marginTop":0,"marginBottom":0}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 6.5L6.5 0L0 6.5L0.707001 7.207L6 1.914L6 24H7L7 1.914L12.293 7.207L13 6.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div style={{"zIndex":14}} className="outerDiv">
           <div
-            id="0:965"
-            style={{"marginLeft":252,"width":107,"minWidth":107,"height":null,"marginTop":-187,"marginBottom":80,"minHeight":107}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/8e99/4171/efeaea5fd2ccd4a5b08dcb8bda55b633">`}} />
-          </div>
-        </div>
-        <div style={{}} className="outerDiv maxer">
-          <div
-            id="0:952"
-            style={{"backgroundColor":null,"overflow":"hidden","width":"100%","pointerEvents":"none"}}
-            className="innerDiv"
-          >
-            <div style={{"zIndex":16,"justifyContent":"center"}} className="outerDiv">
-              <div
-                id="0:1228"
-                style={{"width":375,"marginLeft":null,"height":null,"marginTop":729,"marginBottom":0,"minHeight":83,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                className="innerDiv"
-              >
-                <div>
-                  <div style={{}} className="outerDiv centerer">
-                    <div
-                      id="0:1229"
-                      style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                        <div style={{}} className="outerDiv centerer">
-                          <div
-                            id="0:1230"
-                            style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","boxShadow":"0px -0.5px 0px rgba(0, 0, 0, 0.30000001192092896)"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":1}} className="outerDiv centerer">
-                          <div
-                            id="0:1231"
-                            style={{"width":"10.666666666666666%","marginLeft":"2.933333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":4}} className="outerDiv">
-                                <div
-                                  id="0:1238"
-                                  style={{"marginLeft":12,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":13,"marginBottom":18.514719009399414,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":3}} className="outerDiv">
-                                <div
-                                  id="0:1237"
-                                  style={{"marginLeft":19.0712890625,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":-26.9998779296875,"marginBottom":18.514596939086914,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1233"
-                                  style={{"marginLeft":13.7783203125,"width":1,"minWidth":1,"height":null,"marginTop":-20.943603515625,"marginBottom":13.943603515625,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1234"
-                                  style={{"marginLeft":24.7783203125,"width":1,"minWidth":1,"height":null,"marginTop":-20.943603515625,"marginBottom":13.943603515625,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":8}} className="outerDiv">
-                                <div
-                                  id="0:1241"
-                                  style={{"marginLeft":17.7783203125,"width":4,"minWidth":4,"height":null,"marginTop":-18.943603515625,"marginBottom":17.943603515625,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":6}} className="outerDiv">
-                                <div
-                                  id="0:1239"
-                                  style={{"marginLeft":17.7783203125,"width":1,"minWidth":1,"height":null,"marginTop":-17.943603515625,"marginBottom":13.943603515625,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":7}} className="outerDiv">
-                                <div
-                                  id="0:1240"
-                                  style={{"marginLeft":20.7783203125,"width":1,"minWidth":1,"height":null,"marginTop":-17.943603515625,"marginBottom":13.943603515625,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2}} className="outerDiv">
-                                <div
-                                  id="0:1235"
-                                  style={{"marginLeft":13.7783203125,"width":12,"minWidth":12,"height":null,"marginTop":-13.943603515625,"marginBottom":12.943603515625,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":2}} className="outerDiv centerer">
-                          <div
-                            id="0:1242"
-                            style={{"width":"10.666666666666666%","marginLeft":"21.866666666666667%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1244"
-                                  style={{"marginLeft":12,"width":13,"minWidth":13,"height":null,"marginTop":12,"marginBottom":15,"minHeight":13}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5Z" stroke="black" stroke-linecap="square"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1245"
-                                  style={{"marginLeft":22.5,"width":5,"minWidth":5,"height":null,"marginTop":-17.5,"marginBottom":12.5,"minHeight":5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.371658 0.371658L5.62826 5.62826" stroke="black"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":3}} className="outerDiv centerer">
-                          <div
-                            id="0:1246"
-                            style={{"width":"18.666666666666668%","marginLeft":"40.8%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv centerer">
-                                <div
-                                  id="0:1247"
-                                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","background":"linear-gradient(-2.7547169039247232rad, rgba(255, 0, 214, 1) 0%, rgba(255, 77, 0, 1) 100%)","borderRadius":"20px 20px 20px 20px"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1249"
-                                  style={{"width":1,"marginLeft":0,"height":13,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1250"
-                                  style={{"width":13,"marginLeft":0,"height":1,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":4}} className="outerDiv centerer">
-                          <div
-                            id="0:1251"
-                            style={{"width":"10.666666666666666%","marginLeft":"67.73333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1254"
-                                  style={{"marginLeft":12,"width":16,"minWidth":16,"height":null,"marginTop":12,"marginBottom":12,"minHeight":16}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="8" transform="matrix(-1 0 0 1 8 8)" fill="#DADADA"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1255"
-                                  style={{"marginLeft":10,"width":8,"minWidth":8,"height":null,"marginTop":-18.5,"marginBottom":12,"minHeight":6.5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 0L8 5.5L0 6.5L4 0Z" fill="black"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":5}} className="outerDiv centerer">
-                          <div
-                            id="0:1256"
-                            style={{"width":"10.666666666666666%","marginLeft":"86.4%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1259"
-                                  style={{"marginLeft":16.3046875,"width":7.826148986816406,"minWidth":7.826148986816406,"height":null,"marginTop":12,"marginBottom":20.17391300201416,"minHeight":7.82608699798584}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="4.5" cy="4.49997" rx="3.99015" ry="3.99012" stroke="black" stroke-linecap="square"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1258"
-                                  style={{"marginLeft":15,"width":10.434782981872559,"minWidth":10.434782981872559,"height":null,"marginTop":-19.521728515625,"marginBottom":12.999989032745361,"minHeight":6.521739482879639}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 0.524715C2.97608 0.524715 0.524715 2.97608 0.524715 6V7.36882H11.4753V6C11.4753 2.97608 9.02392 0.524715 6 0.524715Z" stroke="black"/>
-</svg>
-`}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div style={{"zIndex":1}} className="outerDiv centerer">
-                    <div
-                      id="0:1260"
-                      style={{"width":"36%","marginLeft":"32%","height":"6.024096385542169%","top":"84.33734939759036%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-class CProfile0D495 extends PureComponent {
-  render() {
-    return (
-      <div>
-        <div style={{}} className="outerDiv">
-          <div
-            id="0:496"
-            style={{"marginLeft":0,"width":375,"minWidth":375,"height":null,"marginTop":0,"marginBottom":0,"minHeight":812,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-            className="innerDiv"
-          >
-            <div>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":13}} className="outerDiv">
-          <div
-            id="0:1045"
-            style={{"marginLeft":0,"marginRight":0,"flexGrow":1,"height":null,"marginTop":-807,"marginBottom":763,"minHeight":44,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-            className="innerDiv"
-          >
-            <div>
-              <div style={{"zIndex":1}} className="outerDiv">
-                <div
-                  id="0:1062"
-                  style={{"marginLeft":21,"width":56,"minWidth":56,"height":null,"marginTop":8,"marginBottom":13,"minHeight":23,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"alignItems":"center"}} className="outerDiv centerer">
-                      <div
-                        id="0:1063"
-                        style={{"marginLeft":0.33349609375,"marginRight":1.66650390625,"flexGrow":1,"height":18,"marginTop":7,"color":"rgba(0, 0, 0, 1)","fontSize":15,"fontWeight":600,"fontFamily":"SF Pro Text","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.3333333432674408px"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <span style={{}} key="end">9:27</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                <div
-                  id="0:1046"
-                  style={{"marginRight":14,"width":68,"minWidth":68,"height":null,"marginTop":-29,"marginBottom":13,"minHeight":16,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <div style={{"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1047"
-                        style={{"marginRight":0,"width":25,"minWidth":25,"height":null,"marginTop":2,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1048"
-                              style={{"width":"88%","marginLeft":"0%","height":"94.44444179534912%","top":"2.777862548828125%","border":"1px solid rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1049"
-                              style={{"width":"5.333333492279053%","marginLeft":"92%","height":"33.333333333333336%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="2" height="4" viewBox="0 0 2 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.4" d="M0 0V4C0.80794 3.66122 1.33333 2.87313 1.33333 2C1.33333 1.12687 0.80794 0.338777 0 0Z" fill="black"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1050"
-                              style={{"width":"72%","marginLeft":"8%","height":"61.111112435658775%","top":"19.444529215494793%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                              className="innerDiv"
-                            >
-                              <div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":2,"justifyContent":"flex-end"}} className="outerDiv">
-                      <div
-                        id="0:1056"
-                        style={{"marginRight":50,"width":18,"minWidth":18,"height":null,"marginTop":-14,"marginBottom":2,"minHeight":12,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1058"
-                              style={{"width":"16.666666666666668%","marginLeft":"3.7027994791666665%","height":"33.333333333333336%","top":"61.110941569010414%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="4" viewBox="0 0 3 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V3C3 3.55228 2.55228 4 2 4H1C0.447715 4 0 3.55228 0 3V1C0 0.447715 0.447715 0 1 0H2Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1059"
-                              style={{"width":"16.666666666666668%","marginLeft":"29.627821180555557%","height":"50%","top":"44.44427490234375%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="6" viewBox="0 0 3 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V5C3 5.55228 2.55228 6 2 6H1C0.447715 6 0 5.55228 0 5V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1060"
-                              style={{"width":"16.666666666666668%","marginLeft":"55.55555555555556%","height":"69.44444179534912%","top":"25%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="9" viewBox="0 0 3 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 0H2C2.55228 0 3 0.447715 3 1V7.33333C3 7.88562 2.55228 8.33333 2 8.33333H1C0.447715 8.33333 0 7.88562 0 7.33333V1C0 0.447715 0.447715 0 1 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":3}} className="outerDiv centerer">
-                            <div
-                              id="0:1061"
-                              style={{"width":"16.666666666666668%","marginLeft":"81.48057725694444%","height":"88.88889153798421%","top":"5.555470784505208%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="3" height="11" viewBox="0 0 3 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2 0C2.55228 0 3 0.447715 3 1V9.66667C3 10.219 2.55228 10.6667 2 10.6667H1C0.447715 10.6667 0 10.219 0 9.66667V1C0 0.447715 0.447715 0 1 0L2 0Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={{"zIndex":1}} className="outerDiv centerer">
-                      <div
-                        id="0:1051"
-                        style={{"width":"30.88235294117647%","marginLeft":"29.41176470588235%","height":"93.75%","top":"6.25%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                        className="innerDiv"
-                      >
-                        <div>
-                          <div style={{}} className="outerDiv centerer">
-                            <div
-                              id="0:1053"
-                              style={{"width":"73.01587150210426%","marginLeft":"12.697637648809524%","height":"31.11111005147298%","top":"8.888956705729166%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="5" viewBox="0 0 16 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.00044 2.33798C10.3219 2.33808 12.5546 3.21219 14.2371 4.77966C14.3638 4.90067 14.5663 4.89914 14.691 4.77623L15.9021 3.57849C15.9653 3.51616 16.0005 3.43171 16 3.34385C15.9995 3.25599 15.9632 3.17196 15.8993 3.11035C11.4834 -1.03678 4.51678 -1.03678 0.100859 3.11035C0.0368916 3.17192 0.000597157 3.25592 7.30289e-06 3.34378C-0.000582551 3.43164 0.0345808 3.51611 0.0977163 3.57849L1.30914 4.77623C1.43384 4.89933 1.6365 4.90086 1.76312 4.77966C3.44579 3.21209 5.67874 2.33797 8.00044 2.33798Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":1}} className="outerDiv centerer">
-                            <div
-                              id="0:1054"
-                              style={{"width":"47.61904761904762%","marginLeft":"25.395275297619047%","height":"24.444444974263508%","top":"33.333333333333336%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="4" viewBox="0 0 10 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.99881 2.29945C6.22254 2.29938 7.4026 2.75598 8.3097 3.58054C8.43238 3.69756 8.62565 3.69502 8.74525 3.57482L9.90583 2.39766C9.96695 2.33591 10.0009 2.25215 9.99998 2.16511C9.9991 2.07807 9.9635 1.99502 9.90114 1.93453C7.13886 -0.644844 2.86111 -0.644844 0.0988288 1.93453C0.0364329 1.99502 0.000833291 2.07811 1.44426e-05 2.16518C-0.000804405 2.25225 0.0332261 2.336 0.0944733 2.39766L1.25472 3.57482C1.37432 3.69502 1.56759 3.69756 1.69028 3.58054C2.59677 2.75652 3.77589 2.29996 4.99881 2.29945Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                          <div style={{"zIndex":2}} className="outerDiv centerer">
-                            <div
-                              id="0:1055"
-                              style={{"width":"22.222221465337846%","marginLeft":"38.095238095238095%","height":"22.222221692403156%","top":"60%"}}
-                              className="innerDiv"
-                            >
-                              <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.89834 1.34009C4.96508 1.27595 5.00184 1.18767 4.99993 1.09612C4.99802 1.00456 4.95761 0.91783 4.88825 0.856407C3.50964 -0.285469 1.49054 -0.285469 0.111933 0.856407C0.0425245 0.917781 0.00205366 1.00448 7.6004e-05 1.09604C-0.00190165 1.1876 0.0347892 1.2759 0.101485 1.34009L2.26052 3.47345C2.3238 3.53614 2.41007 3.57143 2.50009 3.57143C2.59011 3.57143 2.67639 3.53614 2.73967 3.47345L4.89834 1.34009Z" fill="#DADADA"/>
-</svg>
-`}} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":1}} className="outerDiv">
-          <div
-            id="0:497"
-            style={{"marginLeft":124,"width":128,"minWidth":128,"height":null,"marginTop":-736,"marginBottom":608,"minHeight":128}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/c1dd/ebaa/a96a1c8f502af1c2f1e2b4cfad4329a1">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":2}} className="outerDiv">
-          <div
-            id="0:498"
-            style={{"marginLeft":142,"width":92,"minWidth":92,"height":null,"marginTop":-576,"marginBottom":536,"minHeight":40,"color":"rgba(0, 0, 0, 1)","fontSize":36,"fontWeight":400,"fontFamily":"Comfortaa","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"-0.54px"}}
-            className="innerDiv"
-          >
-            <div>
-              <span style={{}} key="end">Jane</span>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":3}} className="outerDiv">
-          <div
-            id="0:499"
-            style={{"marginLeft":121,"width":133,"minWidth":133,"height":null,"marginTop":-520,"marginBottom":505,"minHeight":15,"color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
-            className="innerDiv"
-          >
-            <div>
-              <span style={{}} key="end">San francisco, ca</span>
-            </div>
-          </div>
-        </div>
-        <div style={{"zIndex":11}} className="outerDiv">
-          <div
-            id="0:1978"
-            style={{"marginLeft":16,"width":343,"minWidth":343,"height":null,"marginTop":-473,"marginBottom":421,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:853"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1979"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(0, 0, 0, 1)","border":"2px solid rgba(0, 0, 0, 1)","borderRadius":"6px 6px 6px 6px"}}
+                  id="1393:672"
+                  style={{"marginLeft":6.5,"marginRight":4.5,"flexGrow":1,"marginTop":0,"marginBottom":0}}
                   className="innerDiv"
                 >
-                  <div>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 17.5L6.5 24L13 17.5L12.293 16.793L7 22.086L7 0H6L6 22.086L0.707 16.793L0 17.5Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":13}} className="outerDiv">
+          <div
+            id="1393:854"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1980"
-                  style={{"width":"9.912536443148689%","marginLeft":"44.690261707361515%","height":"28.846153846153847%","top":"36.53846153846154%","color":"rgba(255, 255, 255, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
+                  id="1393:670"
+                  style={{"marginLeft":0,"marginRight":0,"flexGrow":1,"marginTop":5.5,"marginBottom":5.5}}
                   className="innerDiv"
                 >
-                  <div>
-                    <span style={{}} key="end">test</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0L0 6.5L6.5 13L7.207 12.293L1.914 7H24V6H1.914L7.207 0.707L6.5 0Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
@@ -1951,395 +1163,197 @@ class CProfile0D495 extends PureComponent {
         </div>
         <div style={{"zIndex":12}} className="outerDiv">
           <div
-            id="0:1064"
-            style={{"marginLeft":16,"width":343,"minWidth":343,"height":null,"marginTop":-405,"marginBottom":353,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:855"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1066"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","border":"2px solid rgba(0, 0, 0, 1)","borderRadius":"6px 6px 6px 6px"}}
+                  id="1393:668"
+                  style={{"marginLeft":0,"marginRight":0,"flexGrow":1,"marginTop":5.5,"marginBottom":5.5}}
                   className="innerDiv"
                 >
-                  <div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
-                <div
-                  id="0:1067"
-                  style={{"width":"18.367346938775512%","marginLeft":"40.608629054300295%","height":"28.846153846153847%","top":"36.53846153846154%","color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <span style={{}} key="end">message</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.5 13L24 6.5L17.5 0L16.793 0.707L22.086 6L0 6V7L22.086 7L16.793 12.293L17.5 13Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div style={{"zIndex":4}} className="outerDiv">
-          <div
-            id="0:500"
-            style={{"marginLeft":16,"width":167,"minWidth":167,"height":null,"marginTop":-321,"marginBottom":101,"minHeight":220}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/bc87/1668/7e2847c4e6310a9cf712f5450617b89a">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":6}} className="outerDiv">
-          <div
-            id="0:502"
-            style={{"marginLeft":192,"width":167,"minWidth":167,"height":null,"marginTop":-321,"marginBottom":11,"minHeight":310}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/c68e/8cfb/046c05a90b8c1c79310a25a47c895b38">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":7}} className="outerDiv">
-          <div
-            id="0:503"
-            style={{"marginLeft":82,"width":167,"minWidth":167,"height":null,"marginTop":-277,"marginBottom":-33,"minHeight":310}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/1b4e/29d2/6a515c146ac20a2a2ca882d7dfe910c1">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":9}} className="outerDiv">
-          <div
-            id="0:505"
-            style={{"marginLeft":16,"width":167,"minWidth":167,"height":null,"marginTop":-91,"marginBottom":-219,"minHeight":310}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/cbb5/7d44/b7704ab3d0726157b06e12ed92066182">`}} />
           </div>
         </div>
         <div style={{"zIndex":8}} className="outerDiv">
           <div
-            id="0:504"
-            style={{"marginLeft":16,"width":167,"minWidth":167,"height":null,"marginTop":228,"marginBottom":-538,"minHeight":310}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/022a/a896/32cfdab1b6fd73d721a42ad8b46f6071">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":5}} className="outerDiv">
-          <div
-            id="0:501"
-            style={{"marginLeft":192,"width":167,"minWidth":167,"height":null,"marginTop":318,"marginBottom":-538,"minHeight":220}}
-            className="innerDiv"
-          >
-            <div className="vector" dangerouslySetInnerHTML={{__html: `<img src="https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/5843/7366/8f0c54440436567ba9a497914d58583b">`}} />
-          </div>
-        </div>
-        <div style={{"zIndex":10}} className="outerDiv">
-          <div
-            id="0:1981"
-            style={{"marginLeft":16,"width":343,"minWidth":343,"height":null,"marginTop":570,"marginBottom":-622,"minHeight":52,"backgroundColor":"rgba(0, 0, 0, 0)"}}
+            id="1393:859"
+            style={{"marginLeft":376,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
             <div>
               <div style={{}} className="outerDiv centerer">
                 <div
-                  id="0:1982"
-                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","border":"2px solid rgba(0, 0, 0, 1)","borderRadius":"6px 6px 6px 6px"}}
+                  id="1393:660"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":9,"marginBottom":9}}
                   className="innerDiv"
                 >
-                  <div>
-                  </div>
-                </div>
-              </div>
-              <div style={{"zIndex":1}} className="outerDiv centerer">
-                <div
-                  id="0:1983"
-                  style={{"width":"19.24198250728863%","marginLeft":"40.02553867529154%","height":"28.846153846153847%","top":"36.53846153846154%","color":"rgba(0, 0, 0, 1)","fontSize":13,"fontWeight":900,"fontFamily":"Roboto","textAlign":"CENTER","fontStyle":"normal","lineHeight":"125%","letterSpacing":"0.52px"}}
-                  className="innerDiv"
-                >
-                  <div>
-                    <span style={{}} key="end">see more</span>
-                  </div>
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 6L14 3L11 0L10.293 0.707L12.086 2.5H0V3.5H12.086L10.293 5.293L11 6Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style={{}} className="outerDiv maxer">
+        <div style={{"zIndex":7}} className="outerDiv">
           <div
-            id="0:495"
-            style={{"backgroundColor":null,"overflow":"hidden","width":"100%","pointerEvents":"none"}}
+            id="1393:860"
+            style={{"marginLeft":432,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
             className="innerDiv"
           >
-            <div style={{"zIndex":14,"justifyContent":"center"}} className="outerDiv">
-              <div
-                id="0:1068"
-                style={{"width":375,"marginLeft":null,"height":null,"marginTop":729,"marginBottom":0,"minHeight":83,"backgroundColor":"rgba(0, 0, 0, 0)"}}
-                className="innerDiv"
-              >
-                <div>
-                  <div style={{}} className="outerDiv centerer">
-                    <div
-                      id="0:1069"
-                      style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(0, 0, 0, 0)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                        <div style={{}} className="outerDiv centerer">
-                          <div
-                            id="0:1070"
-                            style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","backgroundColor":"rgba(255, 255, 255, 1)","boxShadow":"0px -0.5px 0px rgba(0, 0, 0, 0.30000001192092896)"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":1}} className="outerDiv centerer">
-                          <div
-                            id="0:287"
-                            style={{"width":"10.666666666666666%","marginLeft":"2.933333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":7}} className="outerDiv">
-                                <div
-                                  id="0:1077"
-                                  style={{"marginLeft":12,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":13,"marginBottom":18.514719009399414,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":6}} className="outerDiv">
-                                <div
-                                  id="0:1076"
-                                  style={{"marginLeft":19.0712890625,"width":8.485280990600586,"minWidth":8.485280990600586,"height":null,"marginTop":-26.9998779296875,"marginBottom":18.514596939086914,"minHeight":8.485280990600586,"backgroundColor":"rgba(196, 196, 196, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1072"
-                                  style={{"marginLeft":13.77783203125,"width":1,"minWidth":1,"height":null,"marginTop":-20.9437255859375,"marginBottom":13.9437255859375,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1073"
-                                  style={{"marginLeft":24.77783203125,"width":1,"minWidth":1,"height":null,"marginTop":-20.9437255859375,"marginBottom":13.9437255859375,"minHeight":7,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":5}} className="outerDiv">
-                                <div
-                                  id="0:1080"
-                                  style={{"marginLeft":17.77783203125,"width":4,"minWidth":4,"height":null,"marginTop":-18.9437255859375,"marginBottom":17.9437255859375,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":3}} className="outerDiv">
-                                <div
-                                  id="0:1078"
-                                  style={{"marginLeft":17.77783203125,"width":1,"minWidth":1,"height":null,"marginTop":-17.9437255859375,"marginBottom":13.9437255859375,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":4}} className="outerDiv">
-                                <div
-                                  id="0:1079"
-                                  style={{"marginLeft":20.77783203125,"width":1,"minWidth":1,"height":null,"marginTop":-17.9437255859375,"marginBottom":13.9437255859375,"minHeight":4,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2}} className="outerDiv">
-                                <div
-                                  id="0:1074"
-                                  style={{"marginLeft":13.77783203125,"width":12,"minWidth":12,"height":null,"marginTop":-13.9437255859375,"marginBottom":12.9437255859375,"minHeight":1,"backgroundColor":"rgba(0, 0, 0, 1)","opacity":0.800000011920929}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":2}} className="outerDiv centerer">
-                          <div
-                            id="0:1081"
-                            style={{"width":"10.666666666666666%","marginLeft":"21.866666666666667%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1083"
-                                  style={{"marginLeft":12,"width":13,"minWidth":13,"height":null,"marginTop":12,"marginBottom":15,"minHeight":13}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5Z" stroke="black" stroke-linecap="square"/>
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:658"
+                  style={{"marginLeft":9,"marginRight":9,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 3L3 0L0 3L0.707 3.707L2.5 1.914L2.5 14H3.5L3.5 1.914L5.293 3.707L6 3Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1084"
-                                  style={{"marginLeft":22.5,"width":5,"minWidth":5,"height":null,"marginTop":-17.5,"marginBottom":12.5,"minHeight":5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.371658 0.371658L5.62826 5.62826" stroke="black"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":10}} className="outerDiv">
+          <div
+            id="1393:857"
+            style={{"marginLeft":264,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:664"
+                  style={{"marginLeft":9,"marginRight":9,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="6" height="14" viewBox="0 0 6 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 11L3 14L6 11L5.293 10.293L3.5 12.086L3.5 0L2.5 0L2.5 12.086L0.707 10.293L0 11Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":3}} className="outerDiv centerer">
-                          <div
-                            id="0:1085"
-                            style={{"width":"18.666666666666668%","marginLeft":"40.8%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv centerer">
-                                <div
-                                  id="0:1086"
-                                  style={{"width":"100%","marginLeft":"0%","height":"100%","top":"0%","background":"linear-gradient(-2.7547169039247232rad, rgba(255, 0, 214, 1) 0%, rgba(255, 77, 0, 1) 100%)","borderRadius":"20px 20px 20px 20px"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1088"
-                                  style={{"width":1,"marginLeft":0,"height":13,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div style={{"zIndex":2,"justifyContent":"center","alignItems":"center"}} className="outerDiv centerer">
-                                <div
-                                  id="0:1089"
-                                  style={{"width":13,"marginLeft":0,"height":1,"marginTop":0,"backgroundColor":"rgba(255, 255, 255, 1)"}}
-                                  className="innerDiv"
-                                >
-                                  <div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":4}} className="outerDiv centerer">
-                          <div
-                            id="0:1090"
-                            style={{"width":"10.666666666666666%","marginLeft":"67.73333333333333%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1093"
-                                  style={{"marginLeft":12,"width":16,"minWidth":16,"height":null,"marginTop":12,"marginBottom":12,"minHeight":16}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="8" transform="matrix(-1 0 0 1 8 8)" fill="#DADADA"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":9}} className="outerDiv">
+          <div
+            id="1393:858"
+            style={{"marginLeft":320,"width":24,"minWidth":24,"height":null,"marginTop":-120,"marginBottom":96,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:662"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":9,"marginBottom":9}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="6" viewBox="0 0 14 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 0L0 3L3 6L3.707 5.293L1.914 3.5L14 3.5V2.5L1.914 2.5L3.707 0.707L3 0Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1094"
-                                  style={{"marginLeft":10,"width":8,"minWidth":8,"height":null,"marginTop":-18.5,"marginBottom":12,"minHeight":6.5}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 0L8 5.5L0 6.5L4 0Z" fill="#DADADA"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":21}} className="outerDiv">
+          <div
+            id="1393:846"
+            style={{"marginLeft":40,"width":24,"minWidth":24,"height":null,"marginTop":-64,"marginBottom":40,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:686"
+                  style={{"marginLeft":4,"marginRight":4,"flexGrow":1,"marginTop":4,"marginBottom":4}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.992 16H5V11H0V9H7L6.992 16ZM16 7H9L9.007 0H11V5H16V7Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div style={{"zIndex":5}} className="outerDiv centerer">
-                          <div
-                            id="0:1095"
-                            style={{"width":"10.666666666666666%","marginLeft":"86.4%","height":"48.19277108433735%","top":"10.843373493975903%","backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
-                            className="innerDiv"
-                          >
-                            <div>
-                              <div style={{"zIndex":1}} className="outerDiv">
-                                <div
-                                  id="0:1098"
-                                  style={{"marginLeft":16.3046875,"width":7.826148986816406,"minWidth":7.826148986816406,"height":null,"marginTop":12,"marginBottom":20.17391300201416,"minHeight":7.82608699798584}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="4.5" cy="4.49997" rx="3.99015" ry="3.99012" stroke="black" stroke-linecap="square"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":36}} className="outerDiv">
+          <div
+            id="1393:1139"
+            style={{"marginLeft":96,"width":24,"minWidth":24,"height":null,"marginTop":-64,"marginBottom":40,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:716"
+                  style={{"marginLeft":5,"marginRight":5,"flexGrow":1,"marginTop":5,"marginBottom":5}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 14H0L0.007 7H2V12H7V14ZM13.992 7H12V2H7V0H14L13.992 7Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                              <div style={{}} className="outerDiv">
-                                <div
-                                  id="0:1097"
-                                  style={{"marginLeft":15,"width":10.434782981872559,"minWidth":10.434782981872559,"height":null,"marginTop":-19.521728515625,"marginBottom":12.999989032745361,"minHeight":6.521739482879639}}
-                                  className="innerDiv"
-                                >
-                                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 0.524715C2.97608 0.524715 0.524715 2.97608 0.524715 6V7.36882H11.4753V6C11.4753 2.97608 9.02392 0.524715 6 0.524715Z" stroke="black"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":2}} className="outerDiv">
+          <div
+            id="1393:865"
+            style={{"marginLeft":152,"width":24,"minWidth":24,"height":null,"marginTop":-64,"marginBottom":40,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:648"
+                  style={{"marginLeft":7.04998779296875,"marginRight":7.050012588500977,"flexGrow":1,"marginTop":4.22198486328125,"marginBottom":4.221014976501465}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.42727 15.7141L0 14.2848L5 9.28586L9.99394 14.2909L8.57172 15.7131L5 12.1414L1.42828 15.7141H1.42727ZM5 6.42828L0.0050505 1.42323L1.42828 0L5 3.57071L8.57071 0L10 1.42828L5.00101 6.42727L5 6.42828Z" fill="#2E3A59"/>
 </svg>
 `}} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div style={{"zIndex":1}} className="outerDiv centerer">
-                    <div
-                      id="0:1099"
-                      style={{"width":"36%","marginLeft":"32%","height":"6.024096385542169%","top":"84.33734939759036%","backgroundColor":"rgba(0, 0, 0, 1)"}}
-                      className="innerDiv"
-                    >
-                      <div>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{"zIndex":1}} className="outerDiv">
+          <div
+            id="1393:866"
+            style={{"marginLeft":208,"width":24,"minWidth":24,"height":null,"marginTop":-64,"marginBottom":40,"minHeight":24,"backgroundColor":"rgba(0, 0, 0, 0)","overflow":"hidden"}}
+            className="innerDiv"
+          >
+            <div>
+              <div style={{}} className="outerDiv centerer">
+                <div
+                  id="1393:646"
+                  style={{"marginLeft":7.04998779296875,"marginRight":7.050012588500977,"flexGrow":1,"marginTop":2.100006103515625,"marginBottom":2.099994659423828}}
+                  className="innerDiv"
+                >
+                  <div className="vector" dangerouslySetInnerHTML={{__html: `<svg preserveAspectRatio="none" width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 20L0.0050505 14.9939L1.42727 13.5707L5 17.1414L8.57071 13.5707L10 14.999L5 20ZM1.42727 6.42929L0 5L5 0L9.99394 5.00505L8.57172 6.42727L5 2.85758L1.42828 6.42828L1.42727 6.42929Z" fill="#2E3A59"/>
+</svg>
+`}} />
                 </div>
               </div>
             </div>

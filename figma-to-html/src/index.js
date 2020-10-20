@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { MasterSearch } from './figmaComponents';
+import { MasterArrow } from './figmaComponents';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<MasterSearch />, document.body);
+ReactDOM.render(<MasterArrow />, document.body);
 registerServiceWorker();
