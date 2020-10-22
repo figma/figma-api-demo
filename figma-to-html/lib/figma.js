@@ -2,7 +2,6 @@ const fs = require('fs');
 
 const VECTOR_TYPES = ['VECTOR', 'LINE', 'REGULAR_POLYGON', 'ELLIPSE'];
 const GROUP_TYPES = ['GROUP', 'BOOLEAN_OPERATION'];
-const RGBA_PROPERTIES = [''];
 
 function styleObjToCssFormat(styleObj) {
 	if (styleObj && Object.keys(styleObj).length > 0) {
@@ -10,16 +9,12 @@ function styleObjToCssFormat(styleObj) {
 		let newStyle = '';
 
 		Object.keys(styleObj).map((key) => {
-			const newKey = key
+			const newStyleKey = key
 				.replace(/([a-z])([A-Z])/g, '$1-$2')
 				.replace(/\s+/g, '-')
 				.toLowerCase();
-			newStyle += `${newKey}: ${styleObj[key]}; `;
+			newStyle += `${newStyleKey}: ${styleObj[key]}; `;
 		});
-		// const camelToKebab = styleToCss
-		//     .replace(/([a-z])([A-Z])/g, '$1-$2')
-		//     .replace(/\s+/g, '-')
-		//     .toLowerCase();
 
 		return newStyle;
 	}
@@ -70,6 +65,13 @@ function getPaint(paintList) {
 	}
 
 	return null;
+}
+
+function getParentPaint(parent) {
+	if (parent && parent.fills && parent.fills.length > 0) {
+		return parent.fills[parent.fills.length - 1];
+	}
+	return getPaint(parent.fills);
 }
 
 function paintToLinearGradient(paint) {
@@ -144,34 +146,10 @@ function expandChildren(node, parent, minChildren, maxChildren, centerChildren, 
 }
 
 const createComponent = (component, imgMap, componentMap) => {
-	const name = 'C' + component.name.replace(/\W+/g, '');
+	const name = component.name.replace(/\W+/g, '');
 	const instance = name + component.id.replace(';', 'S').replace(':', 'D');
 
 	let doc = '';
-	// print(`class ${instance} extends PureComponent {`, '');
-	// print(`  render() {`, '');
-	// print(`    return (`, '');
-
-	const path = `src/components/${name}.js`;
-
-	// 	if (!fs.existsSync(path)) {
-	// 		const componentSrc = `import React, { PureComponent } from 'react';
-	// import { getComponentFromId } from '../figmaComponents';
-
-	// export class ${name} extends PureComponent {
-	//   state = {};
-
-	//   render() {
-	//     const Component = getComponentFromId(this.props.nodeId);
-	//     return <Component {...this.props} {...this.state} />;
-	//   }
-	// }
-	// `;
-	// 		fs.writeFile(path, componentSrc, function (err) {
-	// 			if (err) console.log(err);
-	// 			console.log(`wrote ${path}`);
-	// 		});
-	// 	}
 
 	function print(msg, indent) {
 		doc += `${indent}${msg}\n`;
@@ -281,55 +259,10 @@ const createComponent = (component, imgMap, componentMap) => {
 			}
 		}
 
-		if (['FRAME', 'RECTANGLE', 'INSTANCE', 'COMPONENT'].indexOf(node.type) >= 0) {
+		if (['FRAME', 'INSTANCE', 'COMPONENT'].indexOf(node.type) >= 0) {
 			if (['FRAME', 'COMPONENT', 'INSTANCE'].indexOf(node.type) >= 0) {
 				styles.backgroundColor = colorString(node.backgroundColor);
 				if (node.clipsContent) styles.overflow = 'hidden';
-			} else if (node.type === 'RECTANGLE') {
-				const lastFill = getPaint(node.fills);
-				if (lastFill) {
-					if (lastFill.type === 'SOLID') {
-						styles.backgroundColor = colorString(lastFill.color);
-						styles.opacity = lastFill.opacity;
-					} else if (lastFill.type === 'IMAGE') {
-						styles.backgroundImage = imageURL(lastFill.imageRef);
-						styles.backgroundSize = backgroundSize(lastFill.scaleMode);
-					} else if (lastFill.type === 'GRADIENT_LINEAR') {
-						styles.background = paintToLinearGradient(lastFill);
-					} else if (lastFill.type === 'GRADIENT_RADIAL') {
-						styles.background = paintToRadialGradient(lastFill);
-					}
-				}
-
-				if (node.effects) {
-					for (let i = 0; i < node.effects.length; i++) {
-						const effect = node.effects[i];
-						if (effect.type === 'DROP_SHADOW') {
-							styles.boxShadow = dropShadow(effect);
-						} else if (effect.type === 'INNER_SHADOW') {
-							styles.boxShadow = innerShadow(effect);
-						} else if (effect.type === 'LAYER_BLUR') {
-							styles.filter = `blur(${effect.radius}px)`;
-						}
-					}
-				}
-
-				const lastStroke = getPaint(node.strokes);
-				if (lastStroke) {
-					if (lastStroke.type === 'SOLID') {
-						const weight = node.strokeWeight || 1;
-						styles.border = `${weight}px solid ${colorString(lastStroke.color)}`;
-					}
-				}
-
-				const cornerRadii = node.rectangleCornerRadii;
-				if (
-					cornerRadii &&
-					cornerRadii.length === 4 &&
-					cornerRadii[0] + cornerRadii[1] + cornerRadii[2] + cornerRadii[3] > 0
-				) {
-					styles.borderRadius = `${cornerRadii[0]}px ${cornerRadii[1]}px ${cornerRadii[2]}px ${cornerRadii[3]}px`;
-				}
 			}
 		} else if (node.type === 'TEXT') {
 			const lastFill = getPaint(node.fills);
@@ -384,7 +317,6 @@ const createComponent = (component, imgMap, componentMap) => {
 							? styleObjToCssFormat(styleCache[currStyle])
 							: '';
 
-						// ps.push(`<span style={${styleOverride}} key="${key}">${para}</span>`);
 						ps.push(`<span style="${styleOverride}" key="${key}">${para}</span>`);
 						para = '';
 					}
@@ -429,16 +361,8 @@ const createComponent = (component, imgMap, componentMap) => {
 			printDiv(styles, outerStyle, indent);
 		}
 
-		if (node.type === 'VECTOR' || node.type === 'IMAGE') {
-			// print(
-			// 	`    <div class="vector" dangerouslySetInnerHTML={{__html: \`${
-			// 		imgMap[node.id]
-			// 	}\`}} />`,
-			// 	indent
-			// );
-			print(`    <div class="vector">${imgMap[node.id]}</div>`, indent);
-
-			// print(`<img src="${imgMap[node.id]}" />`, indent);
+		if (node.type === 'VECTOR' || node.type === 'IMAGE' || node.type === 'RECTANGLE') {
+			print(`    <div class="vector">${imgMap[node.id] || ''}</div>`, indent);
 		} else {
 			const newNodeBounds = node.absoluteBoundingBox;
 			const newLastVertical = newNodeBounds && newNodeBounds.y + newNodeBounds.height;
@@ -464,21 +388,8 @@ const createComponent = (component, imgMap, componentMap) => {
 				print(`      </div>`, indent);
 			}
 			if (content != null) {
-				if (node.name.charAt(0) === '$') {
-					const varName = node.name.substring(1);
-					print(
-						`      {this.props.${varName} && this.props.${varName}.split("\\n").map((line, idx) => <div key={idx}>{line}</div>)}`,
-						indent
-					);
-					print(`      {!this.props.${varName} && (<div>`, indent);
-					for (const piece of content) {
-						print(piece, indent + '        ');
-					}
-					print(`      </div>)}`, indent);
-				} else {
-					for (const piece of content) {
-						print(piece, indent + '      ');
-					}
+				for (const piece of content) {
+					print(piece, indent + '      ');
 				}
 			}
 			print(`    </div>`, indent);
@@ -491,9 +402,7 @@ const createComponent = (component, imgMap, componentMap) => {
 	};
 
 	visitNode(component, null, null, '  ');
-	// print('    );', '');
-	// print('  }', '');
-	// print('}', '');
+
 	componentMap[component.id] = { instance, name, doc };
 };
 

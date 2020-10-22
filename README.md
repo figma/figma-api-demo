@@ -1,6 +1,6 @@
-# figma-api-demo
+# figma-html-comveter
 
-This project contains demo apps using the Figma API. They are
-meant to demonstrate how to get started with the various aspects of the API.
-
-See the developer documentation at http://www.figma.com/developers/docs
+- 사용법
+	- `.env`에 `apiKey` 넣어주기
+	- `node main.js fileKey`로 실행
+		- `fileKey`는 [figma api doc](https://www.figma.com/developers/api#get-files-endpoint) 참고
