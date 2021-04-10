@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { MasterClock } from './figmaComponents';
+import { MasterFClock } from './figmaComponents';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<MasterClock />, document.body);
+ReactDOM.render(<MasterFClock />, document.body);
 registerServiceWorker();
