@@ -240,6 +240,32 @@ export class ${name} extends PureComponent {
       if (['FRAME', 'COMPONENT', 'INSTANCE'].indexOf(node.type) >= 0) {
         styles.backgroundColor = colorString(node.backgroundColor);
         if (node.clipsContent) styles.overflow = 'hidden';
+
+        if (node.type === "FRAME") {
+          if (node.strokes.length > 0) {
+            styles.border = `${node.strokeWeight}px solid ${colorString(
+              node.strokes[0].color
+            )}`;
+
+            const cornerRadii = node.rectangleCornerRadii;
+            if ( cornerRadii && cornerRadii.length === 4 && cornerRadii[0] + cornerRadii[1] + cornerRadii[2] + cornerRadii[3] > 0 ) {
+              styles.borderRadius = `${cornerRadii[0]}px ${cornerRadii[1]}px ${cornerRadii[2]}px ${cornerRadii[3]}px`;
+            }
+          }
+        } else {
+          if (node.individualStrokeWeights) {
+            let nodeStrokeWeight = node.individualStrokeWeights;
+            styles.borderTopWidth = `${nodeStrokeWeight.top}px`;
+            styles.borderRightWidth = `${nodeStrokeWeight.right}px`;
+            styles.borderBottomWidth = `${nodeStrokeWeight.bottom}px`;
+            styles.borderLeftWidth = `${nodeStrokeWeight.left}px`;
+
+            if (node.strokes.length > 0) {
+              styles.borderColor = colorString(node.strokes[0].color);
+              styles.borderStyle = "solid";
+            }
+          }
+        }
       } else if (node.type === 'RECTANGLE') {
         const lastFill = getPaint(node.fills);
         if (lastFill) {
@@ -275,6 +301,10 @@ export class ${name} extends PureComponent {
             const weight = node.strokeWeight || 1;
             styles.border = `${weight}px solid ${colorString(lastStroke.color)}`;
           }
+        }
+        
+        if (node.cornerRadius) {
+          styles.borderRadius = `${node.cornerRadius}px`;
         }
 
         const cornerRadii = node.rectangleCornerRadii;
