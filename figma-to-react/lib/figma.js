@@ -276,6 +276,10 @@ export class ${name} extends PureComponent {
             styles.border = `${weight}px solid ${colorString(lastStroke.color)}`;
           }
         }
+        
+        if (node.cornerRadius) {
+          styles.borderRadius = `${node.cornerRadius}px`;
+        }
 
         const cornerRadii = node.rectangleCornerRadii;
         if (cornerRadii && cornerRadii.length === 4 && cornerRadii[0] + cornerRadii[1] + cornerRadii[2] + cornerRadii[3] > 0) {
