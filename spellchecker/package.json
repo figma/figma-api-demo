@@ -25,7 +25,7 @@
     "extend": ">=3.0.2",
     "hoek": "5.0.3",
     "just-extend": ">=4.0.0",
-    "request": "^2.83.0",
+    "request": "^2.88.2",
     "spellchecker": "^3.4.4",
     "sshpk": ">=1.13.2",
     "traverse": "^0.6.6",
